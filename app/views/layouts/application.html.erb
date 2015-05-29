@@ -1,0 +1,44 @@
+<!-- START:head -->
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- START_HIGHLIGHT -->
+  <title>Pragprog Books Online Store</title>
+  <!-- END_HIGHLIGHT -->
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag :defaults %><!-- <label id="code.jlt"/> -->
+  <%= csrf_meta_tags %><!-- <label id="code.csrf"/> -->
+
+  <% if current_user %>
+      <%= link_to('退出', destroy_user_session_path, :method => :delete) %> |
+      <%= link_to('修改密码', edit_registration_path(:user)) %>
+  <% else %>
+      <%= link_to('注册', new_registration_path(:user)) %> |
+      <%= link_to('登录', new_session_path(:user)) %>
+  <% end %><span></span>
+</head>
+<!-- END:head -->
+<body class="store">
+<!-- START_HIGHLIGHT -->
+<div id="banner">
+  <%= image_tag("logo.png") %>
+  <%= @page_title || "Pragmatic Bookshelf" %><!-- <label id="code.depot.e.title"/> -->
+</div>
+<div id="columns">
+  <div id="side">
+    <ul>
+      <li><a href="http://www....">Home</a></li>
+      <li><a href="http://www..../faq">Questions</a></li>
+      <li><a href="http://www..../news">News</a></li>
+      <li><a href="http://www..../contact">Contact</a></li>
+    </ul>
+  </div>
+  <div id="main">
+    <!-- END_HIGHLIGHT -->
+    <%= yield %><!-- <label id="code.depot.e.include"/> -->
+    <!-- START_HIGHLIGHT -->
+  </div>
+</div>
+<!-- END_HIGHLIGHT -->
+</body>
+</html>

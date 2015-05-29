@@ -1,0 +1,7 @@
+<h1>Home#index</h1>
+<% if user_signed_in? %>
+    <p>The user is loged in.</p>
+    <% if can? :manage, :Home %>
+        <%= link_to "About", home_about_path   %>
+    <% end %>
+<% end %>
