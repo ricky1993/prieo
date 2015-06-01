@@ -1,0 +1,240 @@
+
+#one
+{
+    padding-top:20px;
+    padding-left:0px;
+    padding-right:0px;
+    width:1200px;
+    height:460px;
+}
+#title_up
+{
+    margin-left: 0px;
+    margin-right: 0px;
+    background: rgba(0, 118, 209, 0);
+}
+
+#title_up .Edit_title_up
+{
+    font-size:16px;
+    color:#080808;
+}
+
+#title_up .Edit_title_up_right
+{
+    font-size:16px;
+    color:#080808;
+    text-align:right;
+}
+#title_up .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    padding-right: 0px;
+    padding-left: 4px;
+}
+#title_row
+{
+    padding-top:10px;
+}
+#title_col
+{
+    font: 12px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+}
+#title_col .btn {
+    display: inline-block;
+    padding: 0px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;  /*     'transparent'可以用来隐藏solid*/
+    border-radius: 4px;
+}
+#title_row .col-md-3,.col-md-7
+{
+    padding-right: 25px;
+    padding-left: 7.5px;
+}
+
+#title_row .col-md-9
+{
+    padding-right: 30px;
+    padding-left: 15px;
+}
+#title_col h4
+{
+    color:#000000;
+}
+#See_us
+{
+    font: 12px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+}
+#See_us .btn
+{
+    display: inline-block;
+    padding: 0px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;  /*     'transparent'可以用来隐藏solid*/
+    border-radius: 4px;
+}
+#See_us h4
+{
+    color:#000000;
+}
+
+
+.carousel-indicators
+{
+    text-align:right;
+    bottom:0px;
+    width:95%;
+    left:0%;
+    margin-left:0;
+}
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000 \9;
+    background-color: rgba(232, 232, 232, 0.63);
+    border: 0px solid #d3d3d3;
+    border-radius: 10px;
+}
+
+.carousel-indicators .active{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 3px;
+    background-color: #fff;
+}
+
+.carousel-control.left
+{
+    background-image:
+    linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+}
+.carousel-control.right
+{
+    background-image:
+    linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+
+}
+#mycar
+{
+    margin-top:20px;
+}
+#mycar:hover .carousel-control.left span
+{
+    display:inline;
+    position:absolute;
+}
+#mycar:hover .carousel-control.right span
+{
+    display:inline;
+    position:absolute;
+}
+
+.carousel-control.left span
+{
+    display:none;
+}
+.carousel-control.right span
+{
+    display:none;
+}
+
+
+#Recommend
+{
+    font: 14px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+    text-align:center;
+    height:60px;
+}
+
+#Product
+{
+    padding-left:0px;
+    padding-right:0px;
+    width:1210px;
+    height:600px;
+}
+
+#Product .row
+{
+    width:1210px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top:10px;
+}
+
+.P_1
+{
+    background:#ffffff;
+    padding: 0px 5px 0  5px;
+    position:relative;
+    overflow:hidden;
+}
+.P_1 img
+{
+    width:100%;
+}
+.P_1 >a
+{
+    width:100%;
+    height:100%;
+    float:left;
+    text-align:left;
+    position:relative;
+}
+
+.P_icon h4
+{
+    margin-top: 160px;
+    margin-left:10px;
+    color: #fdffff;
+
+}
+.P_icon h5
+{
+    margin-top: 10px;
+    color: #ffffff;
+    margin-left:10px;
+}
+.P_icon
+{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    color: #fff;
+    opacity: 0;
+}
+
+.P_icon:hover
+{
+    background: rgba(150, 206, 209, 0.73);
+    opacity:0.9;
+    transition:opacity 0.5s;
+    -webkit-transition:opacity 0.5s;
+}
+
+
+
