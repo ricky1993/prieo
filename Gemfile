@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bootstrap-sass'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -17,6 +18,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 gem 'cancan'
 gem 'rolify'
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
