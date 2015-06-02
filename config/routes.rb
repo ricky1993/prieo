@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+  namespace :designer do
+    get 'home/index'
+    resource :products
+  end
+
   resources :line_items
   resources :carts
-  resources :products
+
   get 'store/empty_cart'
   get 'store/display_cart'
   get 'store/add_to_cart'
