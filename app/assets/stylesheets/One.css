@@ -5,8 +5,8 @@
     padding-left:0px;
     padding-right:0px;
     width:1200px;
-    height:460px;
 }
+
 #title_up
 {
     margin-left: 0px;
@@ -15,6 +15,11 @@
 }
 
 #title_up .Edit_title_up
+{
+    font-size:16px;
+    color:#080808;
+}
+#title_up .Edit_title_up >a
 {
     font-size:16px;
     color:#080808;
@@ -33,27 +38,22 @@
 #title_row
 {
     padding-top:10px;
+    font: 18px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
 }
 #title_col
 {
-    font: 12px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+
 }
-#title_col .btn {
-    display: inline-block;
-    padding: 0px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    border: 1px solid transparent;  /*     'transparent'可以用来隐藏solid*/
-    border-radius: 4px;
+#title_col .nav>li>a {
+    color:#080808;
+    position: relative;
+    display: block;
+    padding: 5px 15px;
 }
+#title_col .nav-tabs {
+    border-bottom: 0px solid #ddd;
+}
+
 #title_row .col-md-3,.col-md-7
 {
     padding-right: 25px;
@@ -69,10 +69,12 @@
 {
     color:#000000;
 }
+
 #See_us
 {
     font: 12px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
 }
+
 #See_us .btn
 {
     display: inline-block;
@@ -86,13 +88,28 @@
     vertical-align: middle;
     -ms-touch-action: manipulation;
     touch-action: manipulation;
-    cursor: pointer;
     border: 1px solid transparent;  /*     'transparent'可以用来隐藏solid*/
     border-radius: 4px;
+    pointer-events: none;
+    /*下面是让按钮标记不存在，停止使用按钮效果*/
+    cursor: not-allowed;
+    filter: alpha(opacity=100);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: 100;
 }
+
 #See_us h4
 {
     color:#000000;
+}
+#See_us .col-md-8
+{
+    padding-left:20px;
+}
+#See_us .col-md-4
+{
+    padding-left:18px;
 }
 
 
@@ -136,10 +153,18 @@
     linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
 
 }
+#mycar_container
+{
+    width:1200px;
+    padding-left:0;
+    padding-right:0;
+}
 #mycar
 {
-    margin-top:20px;
+    width:1200px;
+    margin-top:10px;
 }
+
 #mycar:hover .carousel-control.left span
 {
     display:inline;
@@ -173,7 +198,7 @@
     padding-left:0px;
     padding-right:0px;
     width:1210px;
-    height:600px;
+
 }
 
 #Product .row
@@ -190,10 +215,6 @@
     padding: 0px 5px 0  5px;
     position:relative;
     overflow:hidden;
-}
-.P_1 img
-{
-    width:100%;
 }
 .P_1 >a
 {
@@ -236,5 +257,139 @@
     -webkit-transition:opacity 0.5s;
 }
 
+/*推荐设计师一行*/
+/*作为背景的满屏*/
+#rec_designer
+{
+    margin-top: 30px;
+    padding-top:20px;
+    width:100%;
+    background: #e2e2e2;
+    padding-bottom:30px;
+}
+/*作为放图片的容器*/
+#rec_designer_all
+{
+    width:1200px;
+    padding-left:0;
+    padding-right:0;
+}
+/*栅格化，左三个栅格 是LEFT  右九个栅格是 RIGHT*/
+#rec_designer_all .row
+{
+    width:1200px;
+    margin-left: 0;
+    margin-right: 0;
+}
+#rec_designer_all .col-md-3, .col-md-9
+{
+    padding-left:0;
+    padding-right:0;
+}
+
+/*圆角化   左上 右上  右下  左下  顺时针*/
+#img_left
+{
+    border-radius: 20px 0 0 20px;
+}
+#img_right
+{
+    border-radius: 0 20px 20px 0;
+}
 
 
+#rec_designer_product
+{
+    margin-top:10px;
+    width:1210px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#rec_designer_product .col-md-3
+{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+.P_2
+{
+    background:#e2e2e2;
+    padding: 0px 5px 0  5px;
+    position:relative;
+    overflow:hidden;
+}
+.P_2 >a
+{
+    width:100%;
+    height:100%;
+    float:left;
+    text-align:left;
+    position:relative;
+}
+
+/*页尾部分*/
+#web_tail
+{
+    background: #080808;
+    width:100%;
+    height:300px;
+}
+#web_tail_content
+{
+    width:1200px;
+    padding-left:0px;
+    padding-right:0px;
+}
+#web_tail .row
+{
+    /*margin-top: 20px;*/
+    /*border-top:3px solid rgba(211, 211, 211, 0.43);*/
+    margin-left:0;
+    margin-right:0;
+    border-bottom:1px inset rgba(176, 176, 176, 0.81);
+}
+#tail_1, #tail_2, #tail_3 , #tail_4
+{
+    padding-left:0;
+    padding-right:0;
+    border-left: 0px inset rgba(176, 176, 176, 0.27);
+    text-align:left;
+    height:230px;
+}
+#tail_1
+{
+    border-left: 0px solid rgba(211, 211, 211, 0.28);
+}
+#web_tail .row .col-md-3>h4
+{
+    padding-left:40px;
+    padding-top:20px;
+    font: 18px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+    color: #aeaeae;
+    padding-bottom: 15px;
+}
+#web_tail .row .col-md-3>h5
+{
+    padding-left:40px;
+    font: 15px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+    color: #aeaeae;
+    padding-bottom: 20px;
+    width:250px;
+}
+
+#web_tail .row .col-md-3>h5 >img
+{
+    width:55px;
+    height:55px;
+}
+
+#web_tail_content >h5
+{
+    padding-top:12px;
+    padding-left:40px;
+    font: 15px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+    color: #9c9c9c;
+    padding-bottom: 20px;
+}
