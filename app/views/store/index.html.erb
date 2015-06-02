@@ -1,17 +1,56 @@
+
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
-<h1>Your Pragmatic Catalog</h1>
-
-<% @products.each do |product| %>
-    <div class="entry">
-      <% image_tag(product.image_url) %>
-      <h3><%= product.title %></h3>
-      <%= sanitize(product.description) %>
-      <div class="price_line">
-        <span class="price"><%= number_to_currency(product.price, unit: "￥") %></span>
-        <%= link_to 'Add to Cart', {:action => 'add_to_cart', :id => product.id} %>
+<body>
+<div id="mycar_container" class="container">
+  <div id="mycar" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators ">
+      <li data-target="#mycar" data-slide-to="0" class="active"></li>
+      <li data-target="#mycar" data-slide-to="1" class=""></li>
+      <li data-target="#mycar" data-slide-to="2" class=""></li>
+    </ol>
+    <div class="carousel-inner"  style="width: 1200px">
+      <div class="item active" >
+        <!--<img src="Image/Page1.jpg"  >-->
+        <%=image_tag ("Page1.jpg")%>
+      </div>
+      <div class="item" >
+        <%=image_tag ("Page2.jpg")%>
+        <!--<img src="Image/Page2.jpg ">-->
+      </div>
+      <div class="item">
+        <%=image_tag ("Page3.jpg")%>
+        <!--<img src="Image/Page3.jpg" >-->
       </div>
     </div>
-<% end %>
-<%= link_to 'Show my cart', {:action => 'display_cart'} %>
+    <a class="left carousel-control  " href="#mycar" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" ></span>
+    </a>
+    <a class="right carousel-control " href="#mycar" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    </a>
+  </div>
+</div>
+<div id="Product" class="container">
+  <div id="Recommend">
+    <h1>
+      <strong>推荐设计/</strong>
+      <strong>Recommend Design</strong>
+    </h1>
+  </div>
+  <div class="row">
+      <% @products.each do |product| %>
+          <div class="P_1 col-md-3">
+            <%= image_tag(product.image_url,size:"290") %>
+            <h3><%= product.title %></h3>
+            <%= sanitize(product.description) %>
+            <div class="price_line">
+              <span class="price"><%= number_to_currency(product.price, unit: "￥") %></span>
+              <%= link_to 'Add to Cart', {:action => 'add_to_cart', :id => product.id} %>
+            </div>
+          </div>
+      <% end %>
+
+  </div>
+</div>

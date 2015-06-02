@@ -1,230 +1,139 @@
+<!-- START:head -->
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-    <link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-    <!--<link href="bootstrap.min.css" rel="stylesheet">-->
-    <%= javascript_include_tag :"jquery-2.1.4.min.js" %>
-    <%= javascript_include_tag :"bootstrap.min.js" %>
-    <!--<link href="One.css" rel="stylesheet">-->
-    <%=stylesheet_link_tag "One.css" %>
-</head>
+  <!-- START_HIGHLIGHT -->
+  <meta charset="UTF-8">
+  <title></title>
+  <title>Pragprog Books Online Store</title>
+  <!-- END_HIGHLIGHT -->
+  <link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+  <%= javascript_include_tag :"jquery-2.1.4.min.js" %>
+  <%= javascript_include_tag :"bootstrap.min.js" %>
+  <!--<link href="One.css" rel="stylesheet">-->
+  <%=stylesheet_link_tag "One.css" %>
+
 <body>
-    <div class="container" id="one">
-        <div id="title_up" class="row">
-            <div class="col-md-5 col-md-push-7">
-                <a class="Edit_title_up col-md-3" href="#">
-                    <span class="glyphicon glyphicon-shopping-cart"></span>
-                    购物车0件
-                </a>
-                <a class="Edit_title_up col-md-4" href="#">
-                    <span class="glyphicon glyphicon glyphicon-user"></span>
-                    登陆/注册
-                </a>
-                <a class="Edit_title_up_right col-md-5" href="#">
-                    <span class="glyphicon glyphicon glyphicon glyphicon-earphone"></span>
-                    400-091-5180
-                </a>
-            </div>
+  <div class="container" id="one">
+    <div id="title_up" class="row">
+      <div class="col-md-5 col-md-push-7">
+        <div class="Edit_title_up col-md-3" href="#">
+          <span class="glyphicon glyphicon-shopping-cart"></span>
+          购物车0件
         </div>
-        <div id="title_row" class="row">
-            <div class="col-md-7">
-                <div class="col-md-3">
-                    <a href="#">
-                        <%= image_tag("Logo.jpg") %>
-                    </a>
-                </div>
-                <div id="title_col" class="col-md-9 btn-group" role="group">
-                    <button type="button" class="btn btn-default"><h4>全部商品</h4></button>
-                    <button type="button" class="btn btn-default"><h4>合作设计师</h4></button>
-                    <button type="button" class="btn btn-default"><h4>工作坊</h4></button>
-                    <button type="button" class="btn btn-default"><h4>定制服务</h4></button>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="搜索">
+        <div class="Edit_title_up col-md-4" href="#">
+          <span class="glyphicon glyphicon glyphicon-user"></span>
+          <% if current_user %>
+              <%= link_to('退出', destroy_user_session_path, :method => :delete) %> |
+              <%= link_to('修改密码', edit_registration_path(:user)) %>
+          <% else %>
+              <%= link_to('注册', new_registration_path(:user)) %> |
+              <%= link_to('登录', new_session_path(:user)) %>
+          <% end %>
+
+        </div>
+        <a class="Edit_title_up_right col-md-5" href="#">
+          <span class="glyphicon glyphicon glyphicon glyphicon-earphone"></span>
+          400-091-5180
+        </a>
+      </div>
+    </div>
+    <div id="title_row" class="row">
+      <div class="col-md-7">
+        <div class="col-md-3">
+          <a href="#">
+            <%= image_tag("logo.jpg") %>
+            <!--<img src="Image/Logo.jpg">-->
+          </a>
+        </div>
+        <div id="title_col" class="col-md-9" >
+          <div role="tabpanel">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" ><a href="#home" aria-controls="home" role="tab" data-toggle="tab">全部商品</a></li>
+              <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">合作设计师</a></li>
+              <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">工作坊</a></li>
+              <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">定制服务</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="搜索">
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                    </spanur local changes to the following files would be overwritten by mer>
-                </div><!-- /input-group -->
-            </div><!-- /.col-lg-6 -->
-            <div id="See_us"class="col-md-2">
-                <button type="button" class="btn btn-default"><h4>关注我们：</h4></button>
-            </div>
+                    </span>
+        </div><!-- /input-group -->
+      </div><!-- /.col-lg-6 -->
+      <div id="See_us"class="col-md-2">
+        <div class="col-md-8">
+          <button type="button" class="btn btn-default " >
+            <h4>关注我们：
+              <!--<img src="Image/wechat.png">-->
+            </h4>
+          </button>
         </div>
-
-        <div id="mycar" class="carousel slide" data-ride="carousel" style="width: 1200px">
-            <ol class="carousel-indicators ">
-                <li data-target="#mycar" data-slide-to="0" class="active"></li>
-                <li data-target="#mycar" data-slide-to="1" class=""></li>
-                <li data-target="#mycar" data-slide-to="2" class=""></li>
-            </ol>
-            <div class="carousel-inner"  style="width: 1200px">
-                <div class="item active" >
-                    <%= image_tag("Page1.jpg") %>
-                </div>
-                <div class="item" >
-                    <%= image_tag("Page2.jpg") %>
-                </div>
-                <div class="item">
-                    <%= image_tag("Page3.jpg") %>
-                </div>
-            </div>
-            <a class="left carousel-control  " href="#mycar" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" ></span>
-            </a>
-            <a class="right carousel-control " href="#mycar" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            </a>
+        <div class="col-md-4">
+          <a href="#">
+            <!--<img src="Image/wechat.png">-->
+            <%=image_tag("wechat.png")%>
+          </a>
         </div>
+      </div>
     </div>
-    <div id="Product" class="container">
-        <div id="Recommend">
-            <h1>
-                <strong>推荐设计/</strong>
-                <strong>Recommend Design</strong>
-            </h1>
-        </div>
-        <div class="row">
-            <div class="P_1 col-md-3">
-                <a href="#">
-                    <%= image_tag("5.jpg",width:"100%")%>
-                    <div class="P_icon">
-                        <h4><strong>生系列戒指——枝</strong></h4>
-                        <h5>Designed by XI </h5>
-                        <h5>——————————</h5>
-                        <h5><strong>￥：458.00</strong></h5>
-                     </div>
-                </a>
-            </div>
-            <div class="P_1 col-md-3">
-                <a href="#">
-                    <%= image_tag("6.jpg")%>
-                    <div class="P_icon">
-                        <h4><strong>生系列戒指——枝</strong></h4>
-                        <h5>Designed by XI </h5>
-                        <h5>——————————</h5>
-                        <h5><strong>￥：458.00</strong></h5>
-                    </div>
-                </a>
-            </div>
-            <div class="P_1 col-md-3">
-                <a href="#">
-                    <%= image_tag("7.jpg")%>
-                    <div class="P_icon">
-                        <h4><strong>生系列戒指——枝</strong></h4>
-                        <h5>Designed by XI </h5>
-                        <h5>——————————</h5>
-                        <h5><strong>￥：458.00</strong></h5>
-                    </div>
-                </a>
-            </div>
-            <div class="P_1 col-md-3">
-                <a href="#">
-                    <%= image_tag("8.jpg")%>
-                    <div class="P_icon">
-                        <h4><strong>生系列戒指——枝</strong></h4>
-                        <h5>Designed by XI </h5>
-                        <h5>——————————</h5>
-                        <h5><strong>￥：458.00</strong></h5>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="P_1 col-md-3">
-                <a href="#">
-                    <%= image_tag("5.jpg")%>
-                    <div class="P_icon">
-                        <h4><strong>生系列戒指——枝</strong></h4>
-                        <h5>Designed by XI </h5>
-                        <h5>——————————</h5>
-                        <h5><strong>￥：458.00</strong></h5>
-                    </div>
-                </a>
-            </div>
-            <div class="P_1 col-md-3">
-                <a href="#">
-                    <%= image_tag("6.jpg")%>
-                    <div class="P_icon">
-                        <h4><strong>生系列戒指——枝</strong></h4>
-                        <h5>Designed by XI </h5>
-                        <h5>——————————</h5>
-                        <h5><strong>￥：458.00</strong></h5>
-                    </div>
-                </a>
-            </div>
-            <div class="P_1 col-md-3">
-                <a href="#">
-                    <%= image_tag("7.jpg")%>
-                    <div class="P_icon">
-                        <h4><strong>生系列戒指——枝</strong></h4>
-                        <h5>Designed by XI </h5>
-                        <h5>——————————</h5>
-                        <h5><strong>￥：458.00</strong></h5>
-                    </div>
-                </a>
-            </div>
-            <div class="P_1 col-md-3">
-                <a href="#">
-                    <%= image_tag("8.jpg")%>
-                    <div class="P_icon">
-                        <h4><strong>生系列戒指——枝</strong></h4>
-                        <h5>Designed by XI </h5>
-                        <h5>——————————</h5>
-                        <h5><strong>￥：458.00</strong></h5>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="P_1 col-md-3">
-                <a href="#">
-                    <%= image_tag("5.jpg")%>
-                    <div class="P_icon">
-                        <h4><strong>生系列戒指——枝</strong></h4>
-                        <h5>Designed by XI </h5>
-                        <h5>——————————</h5>
-                        <h5><strong>￥：458.00</strong></h5>
-                    </div>
-                </a>
-            </div>
-            <div class="P_1 col-md-3">
-                <a href="#">
-                    <%= image_tag("6.jpg")%>
-                    <div class="P_icon">
-                        <h4><strong>生系列戒指——枝</strong></h4>
-                        <h5>Designed by XI </h5>
-                        <h5>——————————</h5>
-                        <h5><strong>￥：458.00</strong></h5>
-                    </div>
-                </a>
-            </div>
-            <div class="P_1 col-md-3">
-                <a href="#">
-                    <%= image_tag("7.jpg")%>
-                    <div class="P_icon">
-                        <h4><strong>生系列戒指——枝</strong></h4>
-                        <h5>Designed by XI </h5>
-                        <h5>——————————</h5>
-                        <h5><strong>￥：458.00</strong></h5>
-                    </div>
-                </a>
-            </div>
-            <div class="P_1 col-md-3">
-                <a href="#">
-                    <%= image_tag("8.jpg")%>
-                    <div class="P_icon">
-                        <h4><strong>生系列戒指——枝</strong></h4>
-                        <h5>Designed by XI </h5>
-                        <h5>——————————</h5>
-                        <h5><strong>￥：458.00</strong></h5>
-                    </div>
-                </a>
-            </div>
-        </div>
+  </div>
+  <div id="columns">
+    <div id="main">
+      <!-- END_HIGHLIGHT -->
+      <%= yield %><!-- <label id="code.depot.e.include"/> -->
+      <!-- START_HIGHLIGHT -->
     </div>
+  </div>
+  <div id="web_tail" class="container">
+    <div id="web_tail_content" class="container">
+      <div class="row">
+        <div id="tail_1" class="col-md-3">
+          <h4>
+            <strong>购物须知</strong>
+          </h4>
+          <h5>
+            3D打印物品按需制作，在您订单确认后，我们将即时进行打印制作，并在10个工作日之内发货。
+          </h5>
+        </div>
+        <div id="tail_2" class="col-md-3">
+          <h4>
+            <strong>定制服务</strong>
+          </h4>
+          <h5>
+            我们支持个性化的定制需求，如果您有很好的设计想法却又暂时无法制作出实物，可以联系我们，我们将为您提供专业的设计咨询及辅助服务。
+          </h5>
+        </div>
+        <div id="tail_3" class="col-md-3">
+          <h4>
+            <strong>联系我们</strong>
+          </h4>
+          <h5>
+            ADD丨地址：上海市沪太路951号H951创意园1-E08<br>
+            P.C.丨邮编：200072<br>
+            TEL 丨电话：+86 21 61205170<br>
+            EMAIL：INFO@PRIEO.COM
+          </h5>
+        </div>
+        <div id="tail_4" class="col-md-3">
+          <h4>
+            <strong>关注我们</strong>
+          </h4>
+          <h5>
+            <%= image_tag ("sina_black.png")%>
+            <%= image_tag ("wechat_black.png")%>
+          </h5>
+        </div>
+      </div>
+      <h5>
+        © 2013-2016 prieo.com 版权所有        沪ICP备13009579 号-1
+      </h5>
+    </div>
+  </div>
 </body>
 </html>
