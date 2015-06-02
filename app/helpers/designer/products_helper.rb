@@ -1,0 +1,2 @@
+module Designer::ProductsHelper
+end
