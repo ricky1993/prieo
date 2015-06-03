@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :designer do
     get 'home/index'
     resource :products
+    get 'products/index'
   end
 
   resources :line_items

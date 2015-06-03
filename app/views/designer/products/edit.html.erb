@@ -1,5 +1,5 @@
-<h1>Designer::Products#new</h1>
-<%= form_for([:designer, @product], :html => { :multipart => true }) do |f| %>
+<h1>Designer::Products#edit</h1>
+<%= form_for(@product, :url => {:controller => 'designer/products', :action => 'update', :id => @product}) do |f| %>
     <% if @product.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
