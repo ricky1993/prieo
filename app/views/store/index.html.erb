@@ -43,11 +43,18 @@
       <% @products.each do |product| %>
           <div class="P_1 col-md-3">
             <%= image_tag(product.image_url,size:"290") %>
-            <h3><%= product.title %></h3>
-            <%= sanitize(product.description) %>
-            <div class="price_line">
-              <span class="price"><%= number_to_currency(product.price, unit: "￥") %></span>
-              <%= link_to 'Add to Cart', {:action => 'add_to_cart', :id => product.id} %>
+            <div class="P_icon">
+                <h4><strong><%= product.title %></strong></h4>
+                <h5><%= sanitize(product.description) %></h5>
+                <h5>——————————</h5>
+                <h5><strong>￥：458.00</strong></h5>
+                <div class="price_line">
+                  <span class="price">
+                    <strong><%= number_to_currency(product.price, unit: "￥:") %>
+                    </strong>
+                  </span>
+                  <%= link_to 'Add to Cart', {:action => 'add_to_cart', :id => product.id} %>
+                </div>
             </div>
           </div>
       <% end %>
