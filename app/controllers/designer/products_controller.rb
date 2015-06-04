@@ -19,6 +19,7 @@ class Designer::ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+    @product.designer = current_user
     @product.save
     redirect_to :action => 'edit', :id => Product.last
     #    respond_to do |format|
