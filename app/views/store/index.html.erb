@@ -47,17 +47,17 @@
                 <h4><strong><%= product.title %></strong></h4>
                 <h5><%= sanitize(product.description) %></h5>
                 <h5>——————————</h5>
-                <h5><strong>￥：458.00</strong></h5>
-                <div class="price_line">
-                  <span class="price">
-                    <strong><%= number_to_currency(product.price, unit: "￥:") %>
-                    </strong>
-                  </span>
-                  <%= link_to 'Add to Cart', {:action => 'add_to_cart', :id => product.id} %>
-                </div>
+                <h5>
+                    <div class="price_line">
+                      <span class="price">
+                        <strong><%= number_to_currency(product.price, unit: "￥:") %>
+                        </strong>
+                      </span>
+                      <%= link_to 'Add to Cart', {:action => 'add_to_cart', :id => product.id} %>
+                    </div>
+                </h5>
             </div>
           </div>
       <% end %>
-
   </div>
 </div>
