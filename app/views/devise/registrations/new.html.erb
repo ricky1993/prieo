@@ -1,34 +1,90 @@
-<h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true %>
+<%=stylesheet_link_tag "Reg.css" %>
+<div id="Register" class="container">
+  <div id="Register_edit" class="container">
+    <h2>
+      User<strong>Signup</strong>
+    </h2>
   </div>
+  <div id="Register_user" class="container">
+    <div class="form-horizontal">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+          <div class="form-group">
+            <div class="col-md-2 col-md-push-2" >
+              <label class="control-label">User</label>
+            </div>
+            <div class="col-md-4 col-md-push-2">
+              <%= f.text_field :username, :placeholder=>'Username' ,autofocus: true %>
+            </div>
+            <div id="attention" class="col-md-4 col-md-push-2">
+              <h5>Please input your user name</h5>
+            </div>
+          </div>
+          <!--<div class="form-group">-->
+            <!--<h5 id="Change" class="col-md-4 col-md-push-4">-->
+              <!--o?<a href="http://localhost:63342/Prieo/Register_mail.html">o</a>-->
+            <!--</h5>-->
+          <!--</div>-->
+          <div class="form-group">
+            <div class="col-md-2 col-md-push-2" >
+              <label class="control-label">Email</label>
+            </div>
+            <div class="col-md-4 col-md-push-2">
+              <%= f.email_field :email, :placeholder=>'Email',autofocus: true %>
+            </div>
+          </div>
+          <div class="form-group">
+                <div class="col-md-4 col-md-push-4">
+                <% if @validatable %>
+                    <em>(<%= @minimum_password_length %> characters minimum)</em>
+                <% end %><br />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-2 col-md-push-2" >
+              <label class="control-label">Password</label>
+            </div>
+            <div class="col-md-4 col-md-push-2">
+              <%= f.password_field :password,:placeholder=>'Password', autocomplete: "off" %>
+            </div>
+            <div id="attention" class="col-md-4 col-md-push-2">
+              <h5>Password</h5>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-2 col-md-push-2" >
+              <label class="control-label">Confirmation</label>
+            </div>
+            <div class="col-md-4 col-md-push-2">
+              <%= f.password_field :password_confirmation,:placeholder=>'Confirm your password', autocomplete: "off" %>
+            </div>
+            <div id="attention" class="col-md-4 col-md-push-2">
+              <h5>Confirm your password</h5>
+            </div>
+          </div>
+          <div class="form-group">
+            <h5 id="Register_agreement" class="col-md-4 col-md-push-4">
+              Click "Sign up" <a href="#">Agreeement</a>
+            </h5>
+          </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+          <div class="form-group">
+            <button id="Register_btn" type="button" class="btn btn-default  col-md-4 col-md-push-4">
+              <%= f.submit "Sign up" %>
+            </button>
+          </div>
+          <div class="form-group">
+            <div class="  col-md-4 col-md-push-4">
+              <%= render "devise/shared/links" %>
+            </div>
+          </div>
+      <% end %>
+    </div>
   </div>
+</div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
 
-<%= render "devise/shared/links" %>

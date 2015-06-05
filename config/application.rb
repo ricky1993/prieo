@@ -6,6 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
 module Prieov01
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -24,3 +25,4 @@ module Prieov01
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
+
