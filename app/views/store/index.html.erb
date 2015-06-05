@@ -1,6 +1,6 @@
 
 <% if notice %>
-<p id="notice"><%= notice %></p>
+    <p id="notice"><%= notice %></p>
 <% end %>
 <body>
 <div id="mycar_container" class="container">
@@ -39,25 +39,70 @@
       <strong>Recommend Design</strong>
     </h1>
   </div>
-  <div class="row">
-      <% @products.each do |product| %>
-          <div class="P_1 col-md-3">
-            <%= image_tag(product.image_url,size:"290") %>
+  <% @products.each do |product| %>
+      <div class="P_1 col-md-3">
+        <div id="each_product" href="#">
+          <%= image_tag(product.image_url) %>
+          <div class="P_icon">
+            <h4><strong><%= product.title %></strong></h4>
+            <h5><%= sanitize(product.description) %></h5>
+            <h5>——————————</h5>
+            <h5>
+              <div class="price_line">
+                          <span class="price">
+                            <strong><%= number_to_currency(product.price, unit: "￥:") %>
+                            </strong>
+                          </span>
+                <%= link_to 'Add to Cart', {:action => 'add_to_cart', :id => product.id} %>
+              </div>
+            </h5>
+          </div>
+        </div>
+      </div>
+  <% end %>
+</div>
+
+
+<div id="rec_designer" class="container">
+  <div id="Recommend">
+    <h1>
+      <strong>推荐设计师/</strong>
+      <strong>Excellent Designer</strong>
+    </h1>
+  </div>
+  <div id="rec_designer_all" class="container">
+    <div class="row" >
+      <div class="col-md-3">
+        <%=image_tag("Left.jpg", id:"img_left")%>
+        <!--<img id="img_left" src="Image/Left.jpg" style="width:300px; height:300px;" >-->
+      </div>
+      <div class="col-md-9">
+        <!--<img id="img_right" src="Image/Right.jpg" style="width:900px; height:300px;">-->
+        <%=image_tag("Right.jpg", size:"300*900", id:"img_right")%>
+      </div>
+    </div>
+  </div>
+  <div id="rec_designer_product" class="row">
+    <% @products.each do |product| %>
+        <div class="P_2 col-md-3">
+          <div id="each_product" href="#">
+            <%= image_tag(product.image_url) %>
             <div class="P_icon">
-                <h4><strong><%= product.title %></strong></h4>
-                <h5><%= sanitize(product.description) %></h5>
-                <h5>——————————</h5>
-                <h5>
-                    <div class="price_line">
+              <h4><strong><%= product.title %></strong></h4>
+              <h5><%= sanitize(product.description) %></h5>
+              <h5>——————————</h5>
+              <h5>
+                <div class="price_line">
                       <span class="price">
                         <strong><%= number_to_currency(product.price, unit: "￥:") %>
                         </strong>
                       </span>
-                      <%= link_to 'Add to Cart', {:action => 'add_to_cart', :id => product.id} %>
-                    </div>
-                </h5>
+                  <%= link_to 'Add to Cart', {:action => 'add_to_cart', :id => product.id} %>
+                </div>
+              </h5>
             </div>
           </div>
-      <% end %>
+        </div>
+    <% end %>
   </div>
 </div>
