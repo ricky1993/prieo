@@ -198,7 +198,7 @@
     padding-left:0px;
     padding-right:0px;
     width:1210px;
-
+    padding-bottom:30px;
 }
 
 #Product .row
@@ -206,17 +206,19 @@
     width:1210px;
     margin-left: 0px;
     margin-right: 0px;
-    margin-top:10px;
+    margin-top:15px;
 }
 
 .P_1
 {
+    margin-top:5px;
     background:#ffffff;
     padding: 0px 5px 0  5px;
     position:relative;
     overflow:hidden;
+    margin-bottom:5px;
 }
-.P_1 >a
+#each_product
 {
     width:100%;
     height:100%;
@@ -225,6 +227,10 @@
     position:relative;
 }
 
+#each_product >img
+{
+    width:100%;
+}
 .P_icon h4
 {
     margin-top: 160px;
@@ -261,8 +267,8 @@
 /*×÷Îª±³¾°µÄÂúÆÁ*/
 #rec_designer
 {
-    margin-top: 30px;
-    padding-top:20px;
+    padding-top: 20px;
+    /*padding-top:10px;*/
     width:100%;
     background: #e2e2e2;
     padding-bottom:30px;
@@ -291,10 +297,14 @@
 #img_left
 {
     border-radius: 20px 0 0 20px;
+    width:300px;
+    height:300px;
 }
 #img_right
 {
     border-radius: 0 20px 20px 0;
+    width:900px;
+    height:300px;
 }
 
 
