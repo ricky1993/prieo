@@ -10,6 +10,8 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @product.visits = @product.visits + 1;
+    @product.save;
   end
 
   # GET /products/new

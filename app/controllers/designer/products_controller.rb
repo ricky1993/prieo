@@ -13,7 +13,6 @@ class Designer::ProductsController < ApplicationController
 
   def show
     render :layout => 'designer/layouts/application'
-
   end
 
   def edit
