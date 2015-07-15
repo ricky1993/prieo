@@ -18,7 +18,9 @@
       <div class="col-md-5 col-md-push-7">
         <div class="Edit_title_up col-md-3" href="#">
           <span class="glyphicon glyphicon-shopping-cart"></span>
-          购物车0件
+          <a href="/store/display_cart">
+            购物车<span id="total_product_num">0</span>件
+          </a>
         </div>
         <div class="Edit_title_up col-md-4" href="#">
           <span class="glyphicon glyphicon glyphicon-user"></span>
@@ -29,7 +31,6 @@
               <%= link_to('注册', new_registration_path(:user)) %> |
               <%= link_to('登录', new_session_path(:user)) %>
           <% end %>
-
         </div>
         <a class="Edit_title_up_right col-md-4" href="#">
           <span class="glyphicon glyphicon glyphicon glyphicon-earphone"></span>
@@ -39,10 +40,9 @@
     </div>
     <div id="title_row" class="row">
       <div class="col-md-7">
-        <div class="col-md-3">
-          <a href="#">
-            <%= image_tag("logo.jpg") %>
-            <!--<img src="Image/Logo.jpg">-->
+        <div id="title_pic" class="col-md-3">
+          <a href="/">
+            <%=image_tag('logo.jpg')%>
           </a>
         </div>
         <div id="title_col" class="col-md-9" >
