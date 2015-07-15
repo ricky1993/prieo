@@ -1,0 +1,171 @@
+# encoding:UTF-8
+<%=stylesheet_link_tag "Product_detail.css" %>
+<%= javascript_include_tag :"Product_detail_selected.js" %>
+<div class="container" id="Product_detail">
+  <ol class="breadcrumb ">
+    <li><a href="#">3D打印设计</a></li>
+    <li><a href="#"> 「生」系列戒指  </a></li>
+    <li class="active">枝</li>
+  </ol>
+  <div class="container" id="Product_detail_out">
+    <div class="container col-md-6" id="Product_detail_car">
+      <div id="Product_detail_mycar" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="item active">
+            <%= image_tag("Detail_Car/Page1.jpg")%>
+          </div>
+          <div class="item">
+            <%= image_tag("Detail_Car/Page2.jpg")%>          </div>
+          <div class="item">
+            <%= image_tag("Detail_Car/Page3.jpg")%>
+          </div>
+          <div class="item">
+            <%= image_tag("Detail_Car/Page4.jpg")%>
+          </div>
+        </div>
+        <a class="left carousel-control  " href="#Product_detail_mycar" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" ></span>
+        </a>
+        <a class="right carousel-control " href="#Product_detail_mycar" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+    <div class="container col-md-6" id="Product_detail_content">
+      <div id="Product_detail_content_title">
+        <%= @product.title %>
+      </div>
+      <div id="Product_detail_content_discription">
+        <%= @product.description %>
+      </div>
+      <div id="Product_detail_content_price" class="row">
+        <div class="row_title col-md-2">
+          价格
+        </div>
+        <div class="price col-md-10">
+          <%= number_to_currency(@product.price, unit: "$") %>
+        </div>
+      </div>
+      <div id="Product_detail_content_material" class="row">
+        <div class="row_title col-md-2 mat_row_2">
+          材质
+        </div>
+        <div class="col-md-10">
+            <% for i in 1..7 do  %>
+              <a href="javascript:" class="mat" >
+                <%= image_tag("Mat/Roseking.jpg")  %>
+              </a>
+            <% end %>
+        </div>
+        <div class="col-md-10">
+          <% for i in 1..7 do  %>
+              <a href="javascript:" class="mat" >
+                <%= image_tag("Mat/Roseking.jpg")  %>
+              </a>
+          <% end %>
+        </div>
+      </div>
+      <div id="Product_detail_content_size" class="row">
+        <div class="row_title col-md-2 siz_row_2">
+          尺寸
+        </div>
+        <div class="col-md-10">
+          <% for i in 1..7 do %>
+              <a href="javascript:" class="siz" >
+                xx.xinc
+              </a>
+          <% end %>
+        </div>
+        <div class="col-md-10">
+          <% for i in 1..7 do %>
+              <a href="javascript:" class="siz" >
+                xx.xinc
+              </a>
+          <% end %>
+        </div>
+      </div>
+      <div id="Product_detail_content_make" class="row">
+        <div class="row_title col-md-2 ">
+          工艺
+        </div>
+        <div class="row_title col-md-10">
+          3D打印，翻模铸造
+        </div>
+      </div>
+      <div id="Product_detail_content_quantity" class="row">
+        <div class="row_title col-md-2 ">
+          数量
+        </div>
+        <div class="btn-group input-group" role="group">
+          <button type="button" class="btn btn-default minus" >-</button>
+          <input id="number_slider" type="text" class="form-control" value="1" >
+          <button type="button" class="btn btn-default add" >+</button>
+        </div>
+      </div>
+
+      <div id="Product_detail_content_buy" >
+        <%= link_to controller: '/store',:action => 'add_to_cart', :id => @product.id do %>
+            <div id="Product_detail_content_buy_after" >
+              <%= image_tag("Buy_Button_Hover.jpg")%>
+            </div>
+            <div id="Product_detail_content_buy_before" >
+              <%= image_tag("Buy_Button.jpg")%>
+            </div>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container" id="Product_detail_before_pic">
+  <div class="container pic_before">
+    <div class="col-md-6 pic_left">
+      <div class="carousel-indicators">
+        <a data-target="#Product_detail_mycar" data-slide-to="0" >
+          <%=image_tag("Detail_Car/Page1.jpg", width:"110px", class:"indicator_img active")%>
+        </a>
+        <a data-target="#Product_detail_mycar" data-slide-to="1" >
+          <%=image_tag("Detail_Car/Page2.jpg", width:"110px", class:"indicator_img")%>
+        </a>
+        <a data-target="#Product_detail_mycar" data-slide-to="2" >
+            <%=image_tag("Detail_Car/Page3.jpg", width:"110px", class:"indicator_img")%>
+        </a>
+        <a data-target="#Product_detail_mycar" data-slide-to="3" >
+          <%=image_tag("Detail_Car/Page4.jpg", width:"110px", class:"indicator_img")%>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-2 pic_middle">
+      <%= image_tag("Designer_1.png")%>
+    </div>
+    <div class="col-md-4 pic_right">
+      <h4>Designer:石溪</h4>
+      美国伦比亚大学建筑学硕士，曾任职于UNStudio，Aedas等世界顶级设计事务所。现创立独立设计工作室，任上海交通大学建筑系客座导师。
+    </div>
+  </div>
+    <div class="pic_after">
+      <%= image_tag("Page_pic_0.jpg", class:"first_page")%>
+      <%= image_tag("Page_pic_1.jpg", class:"page_pic")%>
+      <%= image_tag("Page_pic_2.jpg", class:"page_pic")%>
+      <%= image_tag("Page_pic_3.jpg", class:"page_pic")%>
+      <%= image_tag("Page_pic_4.jpg", class:"page_pic")%>
+      <%= image_tag("Page_pic_5.jpg", class:"page_pic")%>
+    </div>
+    <div class="bs-example bs-example-tabs" data-example-id="togglable-tabs" id="Product_detail_tabs">
+      <ul id="myTabs" class="nav nav-tabs " role="tablist">
+        <li role="presentation" class="col-md-6 active"><a href="#Designer_other_works" id="Designer_other_works_tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">其他作品</a></li>
+        <li role="presentation" class="col-md-6"><a href="#Rec_match" role="tab" id="Rec_match_tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">推荐设计 </a></li>
+      </ul>
+      <div id="myTabContent" class="tab-content">
+        <div role="tabpanel" class="tab-pane fade active in" id="Designer_other_works" aria-labelledby="home-tab">
+          <%= image_tag("Other_1.jpg")%>
+          <%= image_tag("Other_2.jpg")%>
+          <%= image_tag("Other_3.jpg")%>
+          <%= image_tag("Other_4.jpg")%>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="Rec_match" aria-labelledby="profile-tab">
+          <%= image_tag("Other_1.jpg")%>
+        </div>
+      </div>
+    </div>
+</div>

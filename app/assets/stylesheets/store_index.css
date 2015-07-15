@@ -1,0 +1,412 @@
+/*轮播插件部分*/
+#mycar_container
+{
+    width:100%;
+    padding-left:0;
+    padding-right:0;
+}
+#mycar
+{
+    width:100%;
+    margin-top:10px;
+}
+
+#mycar:hover .carousel-control.left span
+{
+    display:inline;
+    position:absolute;
+}
+#mycar:hover .carousel-control.right span
+{
+    display:inline;
+    position:absolute;
+}
+
+.carousel-control.left span
+{
+    display:none;
+}
+.carousel-control.right span
+{
+    display:none;
+}
+.carousel-indicators
+{
+    text-align:right;
+    bottom:0px;
+    width:95%;
+    left:0%;
+    margin-left:0;
+}
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000 \9;
+    background-color: rgba(232, 232, 232, 0.63);
+    border: 0px solid #d3d3d3;
+    border-radius: 10px;
+}
+
+.carousel-indicators .active{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 3px;
+    background-color: #fff;
+}
+
+.carousel-control.left
+{
+    width:10%;
+    background-image:
+    linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+}
+.carousel-control.right
+{
+    width:10%;
+    background-image:
+    linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+
+}
+
+
+
+
+
+#Recommend
+{
+    font: 14px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+    text-align:center;
+    padding-bottom:15px;
+
+}
+
+
+
+
+/*设计精选   部分*/
+
+/*页头字体*/
+#Recommend >h1
+{
+    letter-spacing:10px;
+}
+#Recommend >h4
+{
+    color: #8a8a8a;
+}
+
+
+/*商品列表*/
+#Product
+{
+    padding-left:0px;
+    padding-right:0px;
+    width:1210px;
+    padding-bottom:30px;
+}
+
+#Product .row
+{
+    width:1210px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top:15px;
+}
+
+.P_1
+{
+    margin-top:5px;
+    background: rgba(255, 255, 255, 0);
+    padding: 0 5px 0  5px;
+    overflow:hidden;
+    margin-bottom:5px;
+}
+
+#each_product
+{
+    width:100%;
+    height:100%;
+    float:left;
+    text-align:left;
+    position:relative;
+}
+
+#each_product:hover
+{
+    text-decoration:none;
+    /*cursor:pointer;*/
+}
+
+#each_product >a >img
+{
+    width:100%;
+}
+.P_icon h4
+{
+    margin-top: 200px;
+    margin-left:10px;
+    color: #6ccbe3;
+
+}
+.P_icon h5
+{
+    margin-top: 3px;
+    color: #6ccbe3;
+    margin-left:10px;
+    margin-bottom:0;
+    line-height:1;
+}
+.P_icon
+{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    color: #6ccbe3;
+    opacity: 0;
+}
+
+.P_icon:hover
+{
+    opacity:0.9;
+    transition:opacity 0.5s;
+    -webkit-transition:opacity 0.5s;
+}
+
+
+
+
+
+/*推荐设计部分*/
+#Rec_product
+{
+    background:#eef3f7;
+    font:14px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+}
+
+#Rec_product >a
+{
+    color:#080808;
+}
+#Rec_product .col-md-8
+{
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    padding-left:15px;
+    padding-right:0;
+    text-align:left;
+}
+#Rec_product .col-md-8 >a, .col-md-4 >a
+{
+    color: #2d2d2d;
+}
+
+#Rec_product .col-md-4
+{
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    padding-left:0;
+    padding-right:15px;
+    text-align:right;
+}
+/*推荐商品所属的设计师*/
+#Rec_product_Designer_Left
+{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+#Rec_product_Designer_Right
+{
+    padding-top:20px;
+    height:97px;
+}
+
+
+
+
+
+/*推荐设计师部分*/
+/*作为背景的满屏*/
+#rec_designer
+{
+    margin-top: 30px;
+    padding-top:20px;
+    padding-bottom:30px;
+    padding-left:0;
+    padding-right:0;
+    width:100%;
+    background: #e2e2e2;
+}
+/*作为放图片的容器*/
+#rec_designer_all
+{
+    margin-top:20px;
+    background: #ffffff;
+    width:1200px;
+    padding-left:0;
+    padding-right:0;
+    /*height:60px;*/
+}
+/*栅格化，左三个   右九个*/
+/*对设计师的描述*/
+#rec_designer_all .row
+{
+    width:1200px;
+    margin-left: 0;
+    margin-right: 0;
+}
+#rec_designer_describe
+{
+    font: 14px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+    padding-top:20px;
+}
+#rec_designer_describe >h3
+{
+    font-size:20px;
+}
+
+#rec_designer_all .col-md-3
+{
+    padding-left:60px;
+    padding-right:0;
+}
+#rec_designer_all .col-md-9
+{
+    padding-left:0;
+    padding-right:100px;
+}
+
+
+/*商品部分*/
+
+#rec_designer_product
+{
+    margin-top:10px;
+    width:1210px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#rec_designer_product .col-md-3
+{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+.P_2
+{
+    background:#e2e2e2;
+    padding: 0px 5px 0  5px;
+    position:relative;
+    overflow:hidden;
+}
+.P_2 >a
+{
+    width:100%;
+    height:100%;
+    float:left;
+    text-align:left;
+    position:relative;
+}
+
+
+#workshop_container
+{
+    padding-bottom:20px;
+}
+#workshop_title
+{
+    padding-top:20px;
+    font: 14px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+    text-align:center;
+}
+
+/*设计精选   部分*/
+
+/*页头字体*/
+#workshop_title >h1
+{
+    letter-spacing:10px;
+}
+#workshop_title >h4
+{
+    color: #8a8a8a;
+}
+
+#workshop_container
+{
+    width:1200px;
+    padding-left:0;
+    padding-right:0;
+}
+#workshop_mycar
+{
+    width:100%;
+    margin-top:10px;
+}
+
+#workshop_mycar:hover .carousel-control.left span
+{
+    display:inline;
+    position:absolute;
+}
+#workshop_mycar:hover .carousel-control.right span
+{
+    display:inline;
+    position:absolute;
+}
+
+#service
+{
+    width:1200px;
+    padding:0;
+    border-bottom:1px solid #dddddd;
+    padding-bottom:20px;
+}
+#service_title
+{
+    padding-top:20px;
+    font: 14px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+    text-align:center;
+    padding-bottom:15px;
+    border-bottom:1px solid #dddddd;
+}
+#service_title >h1
+{
+    letter-spacing:10px;
+}
+#service_title >h4
+{
+    color: #8a8a8a;
+}
+
+.btn_out
+{
+    margin-top:20px;
+    text-align:center;
+}
+.title_button
+{
+    width:150px;
+    font: 14px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+    margin-left:auto;
+    margin-right:auto;
+    border:2px solid #505050;
+}
+.title_button >a
+{
+    color:#505050;
+    font-size:25px;
+}
+.title_button >a:hover
+{
+    text-decoration: none;
+    color:#31b0d5;
+}

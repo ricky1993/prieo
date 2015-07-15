@@ -10,8 +10,7 @@ Product.delete_all
 Product.create(title: 'CoffeeScript',
                description:
                    %{
-        CoffeeScript is JavaScript done right. It provides all of JavaScript's
-	functionality wrapped in a cleaner,
+        CoffeeScript is JavaScript done right.
       },
                image_url:   '5.jpg',
                price: 36.00)
@@ -19,8 +18,7 @@ Product.create(title: 'CoffeeScript',
 Product.create(title: 'Programming Ruby 1.9 & 2.0',
                description:
                    %{
-        CoffeeScript is JavaScript done right. It provides all of JavaScript's
-	functionality wrapped in a cleaner,
+        CoffeeScript is JavaScript done right.
 
       },
                image_url: '6.jpg',
@@ -30,7 +28,7 @@ Product.create(title: 'Programming Ruby 1.9 & 2.0',
 Product.create(title: 'Rails T123est Prescriptions',
                description:
                    %{
-        CoffeeScript is JavaScript done right. It provides all of JavaScript's
+        rovides all of JavaScript's
 	functionality wrapped in a cleaner,
 
      },
