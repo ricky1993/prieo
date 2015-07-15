@@ -4,7 +4,6 @@ Rails.application.routes.draw do
     resource :product
     get 'products/index'
   end
-
   resources :line_items
   resources :carts
   resources :products
@@ -12,9 +11,7 @@ Rails.application.routes.draw do
   get 'store/display_cart'
   get 'store/add_to_cart'
   get 'store/index'
-
   get 'home/about'
-
 
   devise_for :users
 

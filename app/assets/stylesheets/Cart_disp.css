@@ -1,0 +1,119 @@
+#cart_display_container
+{
+    font: 14px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+    width:1200px;
+    padding-top:20px;
+    padding-left:0;
+    padding-right:0;
+}
+
+
+#cart_table
+{
+    border-top:1px solid #c5c5c5;
+    margin-bottom:0;
+}
+
+.table>thead
+{
+    background: #f8f8f8;
+}
+.table>thead>tr>td
+{
+    padding-left:0;
+    padding-right:0;
+}
+.table>tbody>tr>td
+{
+    padding-left:0;
+    padding-right:0;
+    vertical-align: middle;
+    height:100px;
+}
+.table>tbody>tr>td>h5
+{
+    font-size:15px;
+}
+
+#Cart_product_image
+{
+    text-align:right;
+}
+#Cart_product_describe
+{
+    padding-top:10px;
+    text-align:left;
+}
+#Cart_product_describe >h4
+{
+    font-size:18px;
+}
+#Cart_product_describe >h5
+{
+    color: #ababab;
+}
+#number_slider
+{
+    margin-top:-12px;
+    width:50%;
+    margin-left:40px;
+}
+
+#cart_display_container .col-md-6,#cart_display_container .col-md-3
+{
+
+    padding-left:0;
+    padding-right:0;
+    text-align:center;
+}
+
+#number_slider_out
+{
+    padding-left:60px;
+
+}
+
+#row_total
+{
+    border:0;
+    width:50%;
+    margin-left:40px;
+}
+#Cart_total
+{
+    width:1200px;
+    padding-left:0;
+    padding-right:0;
+    text-align:right;
+
+}
+#Cart_total >h4>a
+{
+    color:#080808;
+}
+
+
+#Cart_total .table>tbody>tr>td
+{
+    padding-left:0;
+    padding-right:0;
+    vertical-align: bottom;
+    height:100px;
+}
+
+#Cart_total_number
+{
+    text-align:left;
+    width:5%;
+    padding-bottom:5px;
+    color: #de552c;
+}
+
+#Cart_total_number_text
+{
+    font-weight:bold;
+}
+#Cart_total_table
+{
+    margin-bottom:0;
+}

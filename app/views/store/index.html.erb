@@ -1,4 +1,5 @@
-
+# encoding:UTF-8
+<%=stylesheet_link_tag "store_index.css" %>
 <% if notice %>
     <p id="notice"><%= notice %></p>
 <% end %>
@@ -10,10 +11,10 @@
       <li data-target="#mycar" data-slide-to="1" class=""></li>
       <li data-target="#mycar" data-slide-to="2" class=""></li>
     </ol>
-    <div class="carousel-inner"  style="width: 1200px">
+    <div class="carousel-inner"  >
       <div class="item active" >
         <!--<img src="Image/Page1.jpg"  >-->
-        <%=image_tag ("Page1.jpg")%>
+        <img src="../images/Page1.jpg">
       </div>
       <div class="item" >
         <%=image_tag ("Page2.jpg")%>
@@ -36,74 +37,129 @@
 <div id="Product" class="container">
   <div id="Recommend">
     <h1>
-      <strong>推荐设计/</strong>
-      <strong>Recommend Design</strong>
+      <strong>设计精选</strong>
     </h1>
+    <h4>
+      我们用心为您挑选的3D打印精品设计
+    </h4>
   </div>
   <% @products.each do |product| %>
       <div class="P_1 col-md-3">
-        <div id="each_product" href="#">
-          <%= image_tag(product.image_url) %>
-          <div class="P_icon">
-            <h4><strong><%= product.title %></strong></h4>
-            <h5><%= sanitize(product.description) %></h5>
-            <h5>——————————</h5>
-            <h5>
-              <div class="price_line">
-                          <span class="price">
-                            <strong><%= number_to_currency(product.price, unit: "￥:") %>
-                            </strong>
-                          </span>
-                <%= link_to 'Add to Cart', {:action => 'add_to_cart', :id => product.id} %>
-              </div>
-            </h5>
-          </div>
+        <div id="each_product" >
+          <%= link_to controller: 'designer/products', :action =>'show', :id => product.id do %>
+              <span class="P_icon">
+                <h4><strong><%= product.title %></strong></h4>
+                <h5><%= sanitize(product.description) %></h5>
+                <h5>——————————</h5>
+                 <h5 class="price">
+                   <strong>
+                     <%= number_to_currency(product.price, unit: "￥:") %>
+                   </strong>
+                 </h5>
+              </span>
+              <%= image_tag(product.image_url) %>
+          <% end %>
         </div>
       </div>
   <% end %>
 </div>
 
-
+<input type="file" name="uploadFile" />
 <div id="rec_designer" class="container">
   <div id="Recommend">
     <h1>
-      <strong>推荐设计师/</strong>
-      <strong>Excellent Designer</strong>
+      <strong>推荐设计师</strong>
     </h1>
+    <h4>
+      我们衷心希望您关注的优秀设计师
+    </h4>
   </div>
+  <%=image_tag("Top.jpg", width:"100%")%>
   <div id="rec_designer_all" class="container">
-    <div class="row" >
-      <div class="col-md-3">
-        <%=image_tag("Left.jpg", id:"img_left")%>
-        <!--<img id="img_left" src="Image/Left.jpg" style="width:300px; height:300px;" >-->
+    <div class="row">
+      <div class="col-md-3" style="text-align:center">
+        <%=image_tag("bottom.png", width:"150px")%>
       </div>
-      <div class="col-md-9">
-        <!--<img id="img_right" src="Image/Right.jpg" style="width:900px; height:300px;">-->
-        <%=image_tag("Right.jpg", size:"300*900", id:"img_right")%>
+      <div id="rec_designer_describe" class="col-md-9">
+        <h3>
+          石溪
+        </h3>
+        <h5>
+          美国哥伦比亚大学建筑学硕士，同时高额奖学金录取宾夕法尼亚大学。曾任职于UNStudio，Aedas等世界顶级设计事务所。现创立独立设计工作室，任上海交通大学建筑系客座导师。
+        </h5>
       </div>
     </div>
   </div>
+
   <div id="rec_designer_product" class="row">
     <% @products.each do |product| %>
-        <div class="P_2 col-md-3">
-          <div id="each_product" href="#">
-            <%= image_tag(product.image_url) %>
-            <div class="P_icon">
-              <h4><strong><%= product.title %></strong></h4>
-              <h5><%= sanitize(product.description) %></h5>
-              <h5>——————————</h5>
-              <h5>
-                <div class="price_line">
-                      <span class="price">
-                        <strong><%= number_to_currency(product.price, unit: "￥:") %>
-                        </strong>
-                      </span>
-                  <%= link_to 'Add to Cart', {:action => 'add_to_cart', :id => product.id} %>
-                </div>
-              </h5>
-            </div>
+        <div class="P_1 col-md-3">
+          <div id="each_product" >
+            <%= link_to controller: 'designer/products', :action =>'show', :id => product.id do %>
+              <span class="P_icon">
+                <h4><strong><%= product.title %></strong></h4>
+                <h5><%= sanitize(product.description) %></h5>
+                <h5>——————————</h5>
+                 <h5 class="price">
+                   <strong>
+                     <%= number_to_currency(product.price, unit: "￥:") %>
+                   </strong>
+                 </h5>
+              </span>
+                <%= image_tag(product.image_url) %>
+            <% end %>
           </div>
         </div>
     <% end %>
+  </div>
+</div>
+<div id="service" class="container">
+  <div id="service_title">
+    <h1>
+      <strong>定制服务</strong>
+    </h1>
+    <h4>
+      快来实现您的专属3D打印设计
+    </h4>
+  </div>
+  <%=image_tag("service_1.jpg")%>
+  <div class="btn_out">
+    <div class="title_button ">
+      <a href="javascript:;">
+        开始定制
+      </a>
+    </div>
+  </div>
+</div>
+<div id="workshop" class="container">
+  <div id="workshop_title">
+    <h1>
+      <strong>云阈工作室</strong>
+    </h1>
+    <h4>
+      我们致力于研究并推广原创3D打印设计
+    </h4>
+  </div>
+</div>
+<div id="workshop_container" class="container">
+  <div id="workshop_mycar" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="item active">
+        <%=image_tag("workshop_1.jpg")%>
+      </div>
+    </div>
+    <a class="left carousel-control  " href="#workshop_mycar" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" ></span>
+    </a>
+    <a class="right carousel-control " href="#workshop_mycar" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="btn_out ">
+    <div class="title_button ">
+      <a href="javascript:;">
+        来闯一闯
+      </a>
+    </div>
   </div>
 </div>

@@ -1,17 +1,74 @@
-<div class="cart_title">Your Cart</div>
-<table>
-  <% @cart.line_items.each do |item| %>
+<%=stylesheet_link_tag "Cart_disp.css" %>
+<%= javascript_include_tag :"cart_show.js" %>
+<div id="cart_display_container" class="container">
+  <h3 id="titlett"><strong>购物车</strong></h3>
+    <table id="cart_table" class="table">
+      <thead>
       <tr>
-        <td><%= item.quantity %> &times;</td>
-        <td><%= item.product.title %></td>
-        <td class="item_price"><%= number_to_currency(item.total_price, unit: "￥") %></td>
+        <td class="col-md-6">
+          <h4>商品信息</h4>
+        </td>
+        <td class="col-md-6">
+          <h4 class="col-md-3">单价</h4>
+          <h4 class="col-md-3">数量</h4>
+          <h4 class="col-md-3">小计</h4>
+          <h4 class="col-md-3">操作</h4>
+        </td>
       </tr>
-  <% end %>
-  <tr class="total_line">
-    <td colspan="2">Total</td>
-    <td class="total_cell"><%= number_to_currency(@cart.total_price, unit: "￥")%></td>
-  </tr>
-</table>
+      </thead>
+      <tbody>
+      <% @cart.line_items.each do |item| %>
+          <tr>
+            <td >
+              <div id="Cart_product_image"class="col-md-3">
+                <%= image_tag("Cart_1.jpg",size:"80") %>
+              </div>
+              <div id="Cart_product_describe" class="col-md-9">
+                <h4>
+                  <%=item.product.title%>
+                </h4>
+                <h5>
+                  极致绽放女戒极致绽放女戒极致绽放女戒极致绽放女戒
+                </h5>
+              </div>
+            </td>
+            <td class="col-md-6">
+              <h5 class="col-md-3 cart_product_per_price">
+                ￥:
+                <span>
+                  <%=item.product.price%>
+                </span>
+              </h5>
+              <h5 id="number_slider_out" class="col-md-3 ">
+                <input id="number_slider" type="number" class="form-control cart_product_number" value=<%= item.quantity %> min="0" max="99" pattern="[0-9]{2}">
+              </h5>
+              <h5 class="col-md-3 cart_product_row_total_price">
+                ￥:
+                <!--<input type="text" class="form-control" disabled="disabled" id="row_total" value="<%=item.total_price%>">-->
+                <span class="cart_product_row_total_price_span">
+                  <%=item.total_price%>
+                </span>
+              </h5>
+              <h5 class="col-md-3">收藏|删除</h5>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+</div>
+  <div id="Cart_total" class="container">
+    <table id="Cart_total_table" class="table">
+        <tbody>
+            <tr>
+              <td><h4>总计:￥</h4></td>
+              <td id="Cart_total_number"><h2 id="Cart_total_number_text"><%= @cart.total_price%></h2></td>
+            </tr>
+        </tbody>
+    </table>
+    <h4><%= link_to '清空购物车', {:action => 'empty_cart'} %></h4>
+    <h4><%= link_to '返回', {:action => 'index'} %></h4>
+  </div>
 
-<%= link_to 'Empty Cart', {:action => 'empty_cart'} %>
-<%= link_to '返回', {:action => 'index'} %>
+
+
+
