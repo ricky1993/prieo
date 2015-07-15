@@ -1,44 +1,93 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true %>
+<%=stylesheet_link_tag "Reg.css" %>
+<div id="Register" class="container">
+  <div id="Register_edit" class="container">
+    <h2>
+      <%= resource_name.to_s.humanize %><strong>Edit</strong>
+    </h2>
   </div>
+  <div id="Register_user" class="container">
+    <div class="form-horizontal">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+          <%= devise_error_messages! %>
+          <div class="form-group">
+            <div id="form_label_change" class="col-md-2 col-md-push-2" >
+              <label class="control-label">User</label>
+            </div>
+            <div class="col-md-4 col-md-push-2">
+              <%= f.text_field :username, :placeholder=>'Username' ,autofocus: true %>
+            </div>
+            <div id="attention" class="col-md-4 col-md-push-2">
+              <h5>Please input your user name</h5>
+            </div>
+          </div>
+          <!--<div class="form-group">-->
+          <!--<h5 id="Change" class="col-md-4 col-md-push-4">-->
+          <!--o?<a href="http://localhost:63342/Prieo/Register_mail.html">o</a>-->
+          <!--</h5>-->
+          <!--</div>-->
+          <div class="form-group">
+            <div id="form_label_change" class="col-md-2 col-md-push-2" >
+              <label class="control-label">Email</label>
+            </div>
+            <div class="col-md-4 col-md-push-2">
+              <%= f.email_field :email, :placeholder=>'Email',autofocus: true %>
+            </div>
+          </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+          <% end %>
+
+          <div class="form-group">
+            <div id="form_label_change" class="col-md-2 col-md-push-2" >
+              <label class="control-label">Password</label>
+            </div>
+            <div class="col-md-4 col-md-push-2">
+              <%= f.password_field :password,:placeholder=>'Password', autocomplete: "off" %>
+            </div>
+            <div id="attention" class="col-md-5 col-md-push-2">
+              <h5>Leave blank if you don't want to change it</h5>
+            </div>
+          </div>
+          <div class="form-group">
+            <div id="form_label_change" class="col-md-2 col-md-push-2" >
+              <label class="control-label">Confirmation</label>
+            </div>
+            <div class="col-md-4 col-md-push-2">
+              <%= f.password_field :password_confirmation,:placeholder=>'Confirm your password', autocomplete: "off" %>
+            </div>
+            <div id="attention" class="col-md-4 col-md-push-2">
+              <h5>Confirm your password</h5>
+            </div>
+          </div>
+          <div class="form-group">
+            <div id="form_label_change" class="col-md-3 col-md-push-1" >
+              <label class="control-label">Current password</label>
+            </div>
+            <div class="col-md-4 col-md-push-1">
+              <%= f.password_field :current_password,:placeholder=>'Your Current Password', autocomplete: "off" %>
+            </div>
+            <div id="attention" class="col-md-5 col-md-push-1">
+              <h5>We need your current password</h5>
+            </div>
+          </div>
+          <div class="form-group">
+            <button id="Update_btn" type="button" class="btn btn-default  col-md-4 col-md-push-4">
+              <%= f.submit "Update" %>
+            </button>
+          </div>
+      <% end %>
+      <div class="form-group">
+        <button id="Cancel_btn" type="button" class="btn btn-default  col-md-4 col-md-push-4">
+          <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+        </button>
+      </div>
+      <div class="form-group">
+        <div class="  col-md-4 col-md-push-4">
+          <%= link_to "Back", :back %>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>
