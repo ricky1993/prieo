@@ -4,6 +4,43 @@ Rails.application.routes.draw do
     resource :product
     get 'products/index'
   end
+
+
+  namespace :admin do
+    get 'users/index'
+  end
+
+  namespace :admin do
+    get 'users/new'
+  end
+
+  namespace :admin do
+    get 'users/edit'
+  end
+
+  namespace :admin do
+    get 'users/show'
+    get 'users/delete'
+  end
+
+  namespace :admin do
+    get 'home/index'
+    get 'home/login'
+    get 'home/about'
+    get 'home/help'
+    get 'home/contact_us'
+    root 'home#login'
+
+    resources :orders
+    resources :products
+
+    get 'products/delete'
+
+
+  end
+
+
+
   resources :line_items
   resources :carts
   resources :products

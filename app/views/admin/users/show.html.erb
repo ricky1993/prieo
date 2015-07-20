@@ -1,0 +1,18 @@
+<div class="ui segments">
+  <div class="ui segment">
+    <h2>用户详细信息显示</h2>
+  </div>
+  <div class="ui segments">
+    <div class="ui segment">
+      <p>用户名：<%= @user.username %></p>
+      <p>登陆邮箱：<%= @user.email %></p>
+    </div>
+    <div class="ui segment">
+      <p>登陆次数：<%= @user.sign_in_count %></p>
+      <p>本次登陆时间:<%= @user.current_sign_in_at.localtime.to_s(:db) %></p>
+      <p>上次登录时间:<%= @user.last_sign_in_at.localtime.to_s(:db) %></p>
+      <p>本次登陆ip:<%= @user.current_sign_in_ip %></p>
+      <p>上次登录ip:<%= @user.last_sign_in_ip %></p>
+    </div>
+  </div>
+</div>
