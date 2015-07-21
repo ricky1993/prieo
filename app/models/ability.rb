@@ -8,6 +8,9 @@ class Ability
     elsif user.has_role? (:admin)
       can :manage, :all
     elsif user.has_role? (:designer)
+
+    elsif user.has_role?(:customer)
+      can :read, Product
     end
     # Define abilities for the passed in user here. For example:
     #

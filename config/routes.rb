@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :line_items
   resources :carts
   resources :products
+  get 'store/checkout'
   get 'store/empty_cart'
   get 'store/display_cart'
   get 'store/add_to_cart'

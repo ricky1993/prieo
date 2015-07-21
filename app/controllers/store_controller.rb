@@ -3,6 +3,25 @@ class StoreController < ApplicationController
     @products = Product.salable_items
   end
 
+  def save_order
+    @cart = find_cart
+    @order = Order.new(params[:order])
+    @order.line_items << @cart.line_items
+    if @order.save
+      redirect_to(:action => 'empty_cart')
+    else
+      redirect_to()
+    end
+  end
+
+  def checkout
+    @cart = find_cart
+    if @cart.line_items.empty?
+    else
+      @order = Order.new
+    end
+  end
+
   def empty_cart
     @cart=find_cart
     if @cart.empty!
