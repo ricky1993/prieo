@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Xenon Boostrap Admin Panel" />
+  <meta name="author" content="" />
+
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'admin/sidebar.min' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'admin/dropdown.min' %>
+  <%= javascript_include_tag 'admin/sidebar.min' %>
+
+  <%= csrf_meta_tags %>
+
+  <script>
+      $(document)
+              .ready(function() {
+
+// fix main menu to page on passing
+                  $('.main.menu').visibility({
+                      type: 'fixed'
+                  });
+
+                  $('#sidebartoggle').click(function(){
+                      $('.ui.sidebar').sidebar('toggle');
+                  });
+
+
+// show dropdown on hover
+                  $('.main.menu  .ui.dropdown').dropdown({
+                      on: 'hover'});
+              });
+
+  </script>
+
+  <style type="text/css">
+      body {
+          background-color: #FFFFFF;
+      }
+      .ui.menu .item img.logo {
+          margin-right: 1.5em;
+      }
+      .main.container {
+          margin-top: 7em;
+      }
+      .wireframe {
+          margin-top: 2em;
+      }
+      .ui.footer.segment {
+          margin: 5em 0em 0em;
+          padding: 5em 0em;
+      }
+  </style>
+
+</head>
+
+<body>
+<div class="ui fixed inverted menu">
+  <div class="ui container">
+    <div href="#" class="header item">
+      <%= image_tag 'logo.jpg',:class=>'logo' %>
+      Prieo
+    </div>
+    <a href="#" class="item">主页</a>
+    <a href="#" class="ui simple dropdown item">
+      Dropdown <i class="dropdown icon"></i>
+      <div class="menu">
+        <div class="item">Link Item</div>
+        <div class="item">Link Item</div>
+        <div class="divider"></div>
+        <div class="header">Header Item</div>
+        <div class="item">
+          <i class="dropdown icon"></i>
+          Sub Menu
+          <div class="menu">
+            <div class="item">Link Item</div>
+            <div class="item">Link Item</div>
+          </div>
+        </div>
+        <div class="item">Link Item</div>
+      </div>
+    </a>
+    <div class="item">
+      <a>
+        <i class="user icon"></i>
+        我的空间
+      </a>
+    </div>
+    <div class="right item">
+      <div class="ui action left icon input">
+        <i class="search icon"></i>
+        <input type="text" placeholder="Search...">
+        <div class="ui teal button">搜索</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="ui left vertical inverted labeled icon sidebar overlay visible menu">
+  <a class="item">
+    <i class="home icon"></i>
+    主页
+  </a>
+  <a href="/admin/users/index" class="item">
+    <i class="users icon"></i>
+    用户
+  </a>
+
+
+
+  <a href="/admin/products" class="item">
+    <i class="book icon"></i>
+    商品
+  </a>
+  <a class="item">
+    <i class="mail icon"></i>
+    邮件
+  </a>
+  <a class="item">
+    <i class="chat icon"></i>
+    订单
+  </a>
+  <a class="item">
+    <i class="shop icon"></i>
+    商店
+  </a>
+  <a class="item">
+    <i class="settings icon"></i>
+    设置
+  </a>
+</div>
+
+<br />
+<br />
+<br />
+
+
+    <div class="ui container">
+      <%= yield %>
+    </div>
+
+
+</body>
+
+</html>

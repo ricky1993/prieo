@@ -1,0 +1,35 @@
+
+<h1 class="ui top attached header">商品展示</h1>
+<div class="ui attached segment">
+  <table class="ui selectable inverted table">
+    <thead>
+    <tr>
+      <th>编号</th>
+      <th>商品名称</th>
+      <th>价格</th>
+      <th>设计师</th>
+      <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @products.each do |product| %>
+    <tr>
+      <div id=<%= @count %>>
+      <% @count+=1 %>
+      <td><%= @count %></td>
+      <td><%= product.title %></td>
+      <td><%= product.price %></td>
+      <td><%= product.designer %></td>
+        <td><%= link_to '显示',admin_product_path(product),:class =>'mini inverted blue ui button' %>
+        <%= link_to '编辑',edit_admin_product_path(product),:class =>'mini inverted blue ui button' %>
+          <%= link_to '删除',{controller:'admin/products',action:'delete',id:product.id },data: { confirm: '确定要删除该商品吗?' },:class =>'mini inverted red ui button'%>
+      </div>
+    </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+<h3 class="ui bottom attached header">展示结束</h3>
+<br />
+
+<%= link_to '新增商品',new_admin_product_path,class:'ui secondary button' %>
