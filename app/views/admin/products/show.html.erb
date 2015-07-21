@@ -1,0 +1,25 @@
+<div class="ui raised very padded text container segment">
+  <h2 class="ui header">商品详细信息显示</h2>
+  <p>
+    <strong>商品名称:</strong>
+    <%= @product.title %>
+  </p>
+
+  <p>
+    <strong>商品描述:</strong>
+    <%= @product.description %>
+  </p>
+
+  <p>
+    <strong>图片地址:</strong>
+    <%= @product.image_url %>
+  </p>
+
+  <p>
+    <strong>价格:</strong>
+    <%= @product.price %>
+  </p>
+  <%= link_to '编辑', edit_admin_product_path(@product),class:'ui compact button' %> |
+  <%= link_to '返回', admin_products_path,class:'ui compact button' %>
+</div>
+
