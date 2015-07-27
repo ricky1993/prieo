@@ -13,8 +13,7 @@
     </ol>
     <div class="carousel-inner"  >
       <div class="item active" >
-        <!--<img src="Image/Page1.jpg"  >-->
-        <img src="../images/Page1.jpg">
+        <%=image_tag ("Page1.jpg")%>
       </div>
       <div class="item" >
         <%=image_tag ("Page2.jpg")%>
@@ -46,7 +45,7 @@
   <% @products.each do |product| %>
       <div class="P_1 col-md-3">
         <div id="each_product" >
-          <%= link_to controller: 'products', :action =>'show', :id => product.id do %>
+          <%= link_to controller: 'designer/products', :action =>'show', :id => product.id do %>
               <span class="P_icon">
                 <h4><strong><%= product.title %></strong></h4>
                 <h5><%= sanitize(product.description) %></h5>
@@ -64,7 +63,7 @@
   <% end %>
 </div>
 
-<input type="file" name="uploadFile" />
+<!--<input type="file" name="uploadFile" />-->
 <div id="rec_designer" class="container">
   <div id="Recommend">
     <h1>
