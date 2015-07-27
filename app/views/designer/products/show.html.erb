@@ -1,29 +1,75 @@
+<link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+<%= stylesheet_link_tag "designer_products.css" %>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
+<div class="container all">
+  <div class="col-md-5 left_pic">
+    <%= image_tag(@product.image_url, width:"100%") %>
+  </div>
+  <div class="col-md-7 right_dis">
+    <div class="product_title right_row">
+      商品标题：<%= @product.title %>
+    </div>
+    <div class="product_dis right_row">
+      商品描述：<%= @product.description %>
+    </div>
+    <div class="product_price right_row">
+      商品价格：<%= @product.price %>
+    </div>
+    <div class="visits right_row">
+      访问量：<%= @product.visits %>
+    </div>
+    <div class="sold right_row">
+      出售量：11
+    </div>
+    <div class="transfer right_row">
+      转化比：xx
+    </div>
+    <div class="link_to right_row">
+      <%= link_to '修改', {:action => 'edit', :id => @product.id.to_i} %> |
+      <%= link_to '返回', {:controller => 'designer/products', :action => 'index'} %>
+    </div>
+  </div>
+</div>
+<div class="container critics">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <a data-toggle="collapse" href="#collapse_all">
+          <strong>点击查看评论</strong>
+        </a>
+      </div>
+    </div>
+    <div id="collapse_all" class="panel-collapse collapse ">
+      <div class="panel-body media critic_single">
+        <div class="media-left">
+          <%=image_tag("bottom.png", class:"media-object", width:"90px")%>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">Media heading</h4>
+          1024楼主好人一生平安
+        </div>
+      </div>
+      <div class="panel-body media critic_single">
+        <div class="media-left">
+          <%=image_tag("bottom.png", class:"media-object", width:"90px")%>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">Media heading</h4>
+          1024楼主好人一生平安
+        </div>
+      </div>
+      <div class="panel-body media critic_single">
+        <div class="media-left">
+          <%=image_tag("bottom.png", class:"media-object", width:"90px")%>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">Media heading</h4>
+          1024楼主好人一生平安
+        </div>
+      </div>
+    </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= image_tag(@product.image_url) %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<p>
-  <strong>访问量:</strong>
-  <%= @product.visits %>
-</p>
-
-<%= link_to 'Edit', {:action => 'edit', :id => @product.id.to_i} %> |
-<%= link_to 'Back', {:controller => 'designer/products', :action => 'index'} %>
+  </div>
+</div>
