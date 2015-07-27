@@ -36,6 +36,7 @@ Rails.application.routes.draw do
 
     get 'admin/products/delete'
 
+
   end
 
 
