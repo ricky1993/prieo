@@ -1,22 +1,33 @@
-<% @page_title = "Checkout" -%>
-<table>
-  <tr>
-    <td>EMail:</td>
-    <td><%= text_field("order", "email", "size" => 40 ) %></td>
-  </tr>
-  <tr valign="top">
-    <td>Address:</td>
-    <td><%= text_area("order", "address", "cols" => 40, "rows" => 5) %></td>
-  </tr>
-  <tr>
-    <td>Pay using:</td>
-    <td><%=
-        options = [["Select a payment option", ""]] + Order::PAYMENT_TYPES
-        select("order", "pay_type", options)
-    %></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><%= submit_tag(" CHECKOUT ") %></td>
-  </tr>
-</table>
+<%= form_for(@order) do |f| %>
+    <% if @order.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+          <ul>
+            <% @order.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :姓名 %><br>
+      <%= f.text_field :user_name %>
+    </div>
+    <div class="field">
+      <%= f.label :邮箱 %><br>
+      <%= f.email_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :地址 %><br>
+      <%= f.text_field :address %>
+    </div>
+    <div class="field">
+      <%= f.label :price %><br>
+      <%= select_tag(:pay_type, options_for_select([["Select a payment option", ""]] + Order::PAYMENT_TYPES)) %>
+    </div>
+    <div class="actions">
+      <%= f.submit "确定"%>
+    </div>
+<% end %>

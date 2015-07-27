@@ -1,6 +1,7 @@
 class AddPropertyToOrder < ActiveRecord::Migration
   def up
     add_column :orders, :user_id, :integer
+    add_column :orders, :user_name, :string
     add_column :orders, :state, :string
     add_column :orders, :email, :string
     add_column :orders, :address, :string
@@ -12,6 +13,7 @@ class AddPropertyToOrder < ActiveRecord::Migration
 
   def down
     remove_column :orders, :user_id
+    remove_column :orders, :user_name
     remove_column :orders, :state
     remove_column :orders, :email
     remove_column :orders, :address

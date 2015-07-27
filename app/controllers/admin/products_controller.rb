@@ -51,7 +51,7 @@ class Admin::ProductsController < ApplicationController
   end
 
   def delete
-    Product.find(params[:id].to_i).destroy
+    Product.find(params[:id]).destroy
     redirect_to admin_products_url
   end
 
@@ -63,6 +63,6 @@ class Admin::ProductsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def product_params
-    params.require(:product).permit(:title, :description, :image_url, :price,:designer)
+    params.require(:product).permit(:title, :description, :image_url, :price, :designer)
   end
 end
