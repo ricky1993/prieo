@@ -47,27 +47,3 @@ Product.create(title: 'Rails 123Test Prescriptions',
                image_url: '8.jpg',
                price: 34.95)
 
-
-# . . .
-
-Product.create(title: 'Rails Test 123123Prescriptions',
-               description:
-                   %{
-        CoffeeScript is JavaScript done right. It provides all of JavaScript's
-	functionality wrapped in a cleaner,
-
-     },
-               image_url: '7.jpg',
-               price: 34.95)
-
-# . . .
-
-Product.create(title: 'Rails Test Prescriptions123',
-               description:
-                   %{
-        CoffeeScript is JavaScript done right. It provides all of JavaScript's
-	functionality wrapped in a cleaner,
-
-     },
-               image_url: '8.jpg',
-               price: 34.95)

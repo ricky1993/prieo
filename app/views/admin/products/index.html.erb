@@ -22,7 +22,7 @@
       <td><%= product.designer %></td>
         <td><%= link_to '显示',admin_product_path(product),:class =>'mini inverted blue ui button' %>
         <%= link_to '编辑',edit_admin_product_path(product),:class =>'mini inverted blue ui button' %>
-          <%= link_to '删除',{controller:'admin/products',action:'delete',id:product.id },data: { confirm: '确定要删除该商品吗?' },:class =>'mini inverted red ui button'%>
+          <%= link_to '删除',admin_product_path(product),method: :delete, data: { confirm: '确定要删除该商品吗?' },:class =>'mini inverted red ui button'%>
       </div>
     </tr>
     <% end %>

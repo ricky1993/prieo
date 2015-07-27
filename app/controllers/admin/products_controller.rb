@@ -47,22 +47,17 @@ class Admin::ProductsController < ApplicationController
   # DELETE /products/1.json
   def destroy
     @product.destroy
-    redirect_to :index
-  end
-
-  def delete
-    Product.find(params[:id].to_i).destroy
     redirect_to admin_products_url
   end
 
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_product
-    @product = Product.find(params[:id])
+    @product = Product.find(params[:id].to_i)
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def product_params
-    params.require(:product).permit(:title, :description, :image_url, :price,:designer)
+    params.require(:product).permit(:title, :description, :image_url, :price, :designer)
   end
 end
