@@ -15,6 +15,7 @@ Rails.application.config.assets.precompile += %w( cart_show.js )
 Rails.application.config.assets.precompile += %w( Product_detail_selected.js )
 Rails.application.config.assets.precompile += %w( admin/dropdown.min.js )
 Rails.application.config.assets.precompile += %w( admin/sidebar.min.js )
+Rails.application.config.assets.precompile += %w( share_tool.js )
 
 
 
