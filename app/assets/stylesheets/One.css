@@ -106,6 +106,113 @@
 
 
 
+/*Ðü¸¡´°¿Ú*/
+#adver_all
+{
+    width:100%;
+    margin-right:50px;
+    text-align:right;
+}
+
+#adver
+{
+    width:34px;
+    right:0;
+    left:auto;
+    bottom:30px;
+    background-color:transparent;
+    border-color:transparent;
+}
+
+
+#adver .nav_butt
+{
+    padding:6px;
+    background-color:#080808;
+}
+
+#adver .nav_butt >img
+{
+    width:22px;
+}
+
+#share
+{
+    right:35px;
+    left:auto;
+    width:320px;
+    margin-left:-320px;
+    color: #e1e1e1;
+    text-align:right;
+    font: 16px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+}
+
+#adver_all .share_close
+{
+    bottom:-300px;
+}
+
+#adver_all .share_open
+{
+    bottom:30px;
+}
+
+#share .share_head
+{
+    background-color: #000000;
+    font-size:15px;
+    font-weight:bold;
+    height:40px;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:10px;
+}
+
+#share .title
+{
+    margin-right:115px;
+}
+
+#butt_close:hover
+{
+    cursor:pointer;
+}
+#share .share_body
+{
+    height:250px;
+    background-color: rgba(0,0,0,0.9);
+}
+#share .share_unit
+{
+    margin-top:30px;
+    text-align:center;
+}
+
+#share .share_butt
+{
+    color: #8b8b8b;
+    font-size:10px;
+}
+
+#share .share_butt:hover, #share .share_butt:focus
+{
+    text-decoration: none;
+    color: #dadada;
+}
+
+#share .share_butt>img
+{
+    background: #464646;
+    border-radius: 5px;
+    width:50px;
+    margin-bottom:10px;
+}
+
+#share .share_butt>img:hover
+{
+    background: #888888;
+}
+
 
 /*Ò³Î²²¿·Ö*/
 #web_tail
