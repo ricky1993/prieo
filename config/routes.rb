@@ -33,10 +33,6 @@ Rails.application.routes.draw do
 
     resources :orders
     resources :products
-
-    get 'admin/products/delete'
-
-
   end
 
 

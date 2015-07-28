@@ -17,6 +17,16 @@ class ApplicationController < ActionController::Base
     end
     root_path
   end
+
+  private
+  def find_cart
+    Cart.find(session[:cart_id])
+  rescue ActiveRecord::RecordNotFound
+    cart = Cart.create
+    session[:cart_id] = cart.id
+    cart
+  end
+
   protected
 
   def configure_permitted_parameters
