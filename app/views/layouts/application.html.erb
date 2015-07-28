@@ -10,6 +10,7 @@
   <link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
   <%= javascript_include_tag :"jquery-2.1.4.min.js" %>
   <%= javascript_include_tag :"bootstrap.min.js" %>
+  <%= javascript_include_tag :"share_tool.js" %>
   <!--<link href="One.css" rel="stylesheet">-->
   <%=stylesheet_link_tag "One.css" %>
 <body>
@@ -104,6 +105,80 @@
       <!-- START_HIGHLIGHT -->
     </div>
   </div>
+
+
+  <!-- 悬浮窗口-->
+  <div id="adver_all" class="container">
+    <nav id="adver" class="navbar navbar-inverse navbar-fixed-bottom">
+      <div class="collapse navbar-collapse" >
+        <ul class="nav navbar-nav">
+          <li><a href="#" class="nav_butt"><%=image_tag 'Button_back.png'%></a></li>
+          <li><a href="javascrit:;"onclick="share_change()" class="nav_butt"><%=image_tag 'Button_share.png'%></a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </nav>
+    <nav id="share" class="navbar-fixed-bottom share_close" >
+      <div class="share_head">
+          <span class="title">
+            分享
+          </span>
+          <span id="butt_close" onclick="share_close()" >
+            <%=image_tag 'Button_close.png', :height=>'12px'%>
+          </span>
+      </div>
+      <div class="share_body">
+        <div class="col-md-3 share_unit">
+          <a class="share_butt" href="http://api.bshare.cn/share/sinaminiblog?url=http%3A%2F%2Fwww.prieo.com%2F&amp;title=发现一个好东东，大家一起分享：&amp;summary=prieo">
+            <%=image_tag 'share/sina_icon.png'%>
+            <p>新浪微博</p>
+          </a>
+        </div>
+        <div class="col-md-3 share_unit">
+          <a class="share_butt" href="http://api.bshare.cn/share/renren?url=http%3A%2F%2Fwww.prieo.com%2F&amp;title=发现一个好东东，大家一起分享：&amp;summary=prieo">
+            <%=image_tag 'share/ren_icon.png'%>
+            <p>人人网</p>
+          </a>
+        </div>
+        <div class="col-md-3 share_unit">
+          <a class="share_butt" href="http://api.bshare.cn/share/kaixin001?url=http%3A%2F%2Fwww.prieo.com%2F&amp;title=发现一个好东东，大家一起分享：&amp;summary=prieo" >
+            <%=image_tag 'share/kx_icon.png'%>
+            <p>开心网</p>
+          </a>
+        </div>
+        <div class="col-md-3 share_unit">
+          <a class="share_butt" href="http://api.bshare.cn/share/douban?url=http%3A%2F%2Fwww.prieo.com%2F&amp;title=发现一个好东东，大家一起分享：&amp;summary=prieo">
+            <%=image_tag 'share/db_icon.png'%>
+            <p>豆瓣</p>
+          </a>
+        </div>
+        <div class="col-md-3 share_unit">
+          <a href="#" class="share_butt">
+            <%=image_tag 'share/wx_icon.png'%>
+            <p>微信</p>
+          </a>
+        </div>
+        <div class="col-md-3 share_unit">
+          <a class="share_butt" href="http://api.bshare.cn/share/qqmb?url=http%3A%2F%2Fwww.prieo.com%2F&amp;title=发现一个好东东，大家一起分享：&amp;summary=prieo">
+            <%=image_tag 'share/t_qq_icon.png'%>
+            <p>腾讯微博</p>
+          </a>
+        </div>
+        <div class="col-md-3 share_unit">
+          <a class="share_butt" href="http://api.bshare.cn/share/qzone?url=http%3A%2F%2Fwww.prieo.com%2F&amp;title=发现一个好东东，大家一起分享：&amp;summary=prieo">
+            <%=image_tag 'share/qzone_icon.png'%>
+            <p>QQ空间</p>
+          </a>
+        </div>
+        <div class="col-md-3 share_unit">
+          <a href="#" class="share_butt">
+            <%=image_tag 'share/ewm_icon.png'%>
+            <p>二维码</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
   <div id="web_tail" class="container">
     <div id="web_tail_content" class="container">
       <div class="row">
