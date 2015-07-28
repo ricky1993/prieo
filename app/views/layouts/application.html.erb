@@ -1,6 +1,6 @@
 <!-- START:head -->
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
   <!-- START_HIGHLIGHT -->
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -14,57 +14,87 @@
   <%=stylesheet_link_tag "One.css" %>
 <body>
   <div class="container" id="one">
-    <div id="title_up" class="row">
-      <div class="col-md-5 col-md-push-7">
-        <div class="Edit_title_up col-md-3" href="#">
-          <span class="glyphicon glyphicon-shopping-cart"></span>
-          <a href="/store/display_cart">
-            购物车<span id="total_product_num">0</span>件
-          </a>
-        </div>
-        <div class="Edit_title_up col-md-4" href="#">
-          <span class="glyphicon glyphicon glyphicon-user"></span>
-          <% if current_user %>
-              <%= link_to('退出', destroy_user_session_path, :method => :delete) %> |
-              <%= link_to('修改密码', edit_registration_path(:user)) %>
-          <% else %>
-              <%= link_to('注册', new_registration_path(:user)) %> |
-              <%= link_to('登录', new_session_path(:user)) %>
-          <% end %>
-        </div>
-        <a class="Edit_title_up_right col-md-4" href="#">
-          <span class="glyphicon glyphicon glyphicon glyphicon-earphone"></span>
-          400-091-5180
-        </a>
-      </div>
-    </div>
     <div id="title_row" class="row">
-      <div class="col-md-7">
-        <div id="title_pic" class="col-md-3">
+      <div class="col-md-9">
+        <div id="title_pic" class="col-md-2">
           <a href="/">
             <%= image_tag 'logo.png',:height=>'40px'%>
           </a>
         </div>
         <div id="title_col" class="col-md-9" >
-          <div role="tabpanel">
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" ><a href="#home" aria-controls="home" role="tab" data-toggle="tab">全部商品</a></li>
-              <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">合作设计师</a></li>
-              <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">工作坊</a></li>
-              <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">定制服务</a></li>
-            </ul>
+          <div class="col-md-2 title_unit">
+              <span class="title_unit_pic col-md-3">
+                <%=image_tag 'button_buy.png'%>
+              </span>
+              <span class="title_unit_content col-md-9">
+                <span class="title">买点不同</span>
+                <span class="second_title"><br>全部商品</span>
+              </span>
+          </div>
+          <div class="col-md-2 title_unit">
+              <span class="title_unit_pic col-md-3">
+                <%=image_tag 'button_rand.png'%>
+              </span>
+              <span class="title_unit_content col-md-9">
+                <span class="title">来点不同</span>
+                <span class="second_title"><br>趣味购物</span>
+              </span>
+          </div>
+          <div class="col-md-2 title_unit">
+              <span class="title_unit_pic col-md-3">
+                <%=image_tag 'button_des.png'%>
+              </span>
+              <span class="title_unit_content col-md-9">
+                <span class="title">找点不同</span>
+                <span class="second_title"><br>合作设计师</span>
+              </span>
+          </div>
+          <div class="col-md-2 title_unit">
+              <span class="title_unit_pic col-md-3">
+                <%=image_tag 'button_make.png'%>
+              </span>
+              <span class="title_unit_content col-md-9">
+                <span class="title">做点不同</span>
+                <span class="second_title"><br>定制服务</span>
+              </span>
+          </div>
+          <div class="col-md-2 title_unit">
+              <span class="title_unit_pic col-md-3">
+                <%=image_tag 'button_learn.png'%>
+              </span>
+              <span class="title_unit_content col-md-9">
+                <span class="title">学点不同</span>
+                <span class="second_title"><br>3D打印工作室</span>
+              </span>
           </div>
         </div>
       </div>
       <div class="col-md-3">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="搜索">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                    </span>
-        </div><!-- /input-group -->
-      </div><!-- /.col-lg-6 -->
+          <div class="Edit_title_up col-md-6" >
+            <span class="title_unit_pic col-md-3">
+                <%=image_tag 'Button_cart.png'%>
+              </span>
+            <span class="title_unit_content col-md-9">
+              <a href="/store/display_cart" class="title">
+                购物车<span id="total_product_num">0</span>件
+              </a>
+            </span>
+          </div>
+          <div class="col-md-6" >
+              <span class="title_unit_pic col-md-3">
+                <%=image_tag 'Button_Reg.png'%>
+              </span>
+              <span class="title_unit_content col-md-9">
+                  <% if current_user %>
+                <%= link_to('退出', destroy_user_session_path, :method => :delete, :class=>"title") %> |
+                      <%= link_to('修改', edit_registration_path(:user), :class=>"title") %>
+                <% else %>
+                <%= link_to('注册', new_registration_path(:user), :class=>"title") %> |
+                      <%= link_to('登录', new_session_path(:user), :class=>"title") %>
+                <% end %>
+              </span>
+          </div>
+      </div>
     </div>
   </div>
   <div id="columns">
