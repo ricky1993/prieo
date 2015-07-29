@@ -152,7 +152,7 @@
           </a>
         </div>
         <div class="col-md-3 share_unit">
-          <a href="#" class="share_butt">
+          <a href="#" data-toggle="modal" data-target="#myModal" class="share_butt">
             <%=image_tag 'share/wx_icon.png'%>
             <p>微信</p>
           </a>
@@ -170,13 +170,33 @@
           </a>
         </div>
         <div class="col-md-3 share_unit">
-          <a href="#" class="share_butt">
+          <a href="#" data-toggle="modal" data-target="#myModal" class="share_butt">
             <%=image_tag 'share/ewm_icon.png'%>
             <p>二维码</p>
           </a>
         </div>
+
       </div>
     </nav>
+    <div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <!--<div class="modal-header">-->
+            <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+              <!--<span aria-hidden="true">&times;</span>-->
+            <!--</button>-->
+            <!--<h4 class="modal-title" id="myModalLabel">Modal title</h4>-->
+          <!--</div>-->
+          <div class="modal-body">
+            <h5>用微信扫描二维码，分享到朋友圈！</h5>
+            <%=image_tag 'share/qrcode.png'%>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div id="web_tail" class="container">
