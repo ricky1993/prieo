@@ -150,11 +150,13 @@
 #adver_all .share_close
 {
     bottom:-300px;
+    transition: bottom 0.5s linear;
 }
 
 #adver_all .share_open
 {
     bottom:30px;
+    transition: bottom 0.5s linear;
 }
 
 #share .share_head
@@ -213,6 +215,18 @@
     background: #888888;
 }
 
+#myModal
+{
+    text-align:center;
+}
+#myModal .modal-dialog
+{
+    width:300px;
+}
+#myModal .modal-body >img
+{
+    width:200px;
+}
 
 /*Ò³Î²²¿·Ö*/
 #web_tail
