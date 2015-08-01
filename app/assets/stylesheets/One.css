@@ -150,7 +150,7 @@
 #adver_all .share_close
 {
     bottom:-300px;
-    transition: bottom 0.5s linear;
+    /*transition: bottom 0.5s linear;*/
 }
 
 #adver_all .share_open

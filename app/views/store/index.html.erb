@@ -49,7 +49,7 @@
   <% @products.each do |product| %>
       <div class="P_1 col-md-3">
         <div id="each_product" >
-          <%= link_to controller: 'admin/products', :action =>'show', :id => product.id do %>
+          <%= link_to controller: 'products', :action =>'show', :id => product.id do %>
               <span class="P_icon">
                 <h4><strong><%= product.title %></strong></h4>
                 <h5><%= sanitize(product.description) %></h5>
