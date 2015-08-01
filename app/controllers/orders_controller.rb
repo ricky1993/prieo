@@ -14,6 +14,11 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
+    @cart = find_cart
+    if @cart.line_items.empty?
+      redirect_to store_index_url, notice: "Your cart is empty"
+      return
+    end
     @order = Order.new
   end
 
@@ -25,16 +30,11 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     @order = Order.new(order_params)
-
-    respond_to do |format|
-      if @order.save
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
-        format.json { render :show, status: :created, location: @order }
-      else
-        format.html { render :new }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
-      end
-    end
+    @order.add_line_items_from_cart(find_cart)
+    @order.save
+    find_cart.destroy
+    session[:cart_id] = nil
+    redirect_to store_index_url
   end
 
   # PATCH/PUT /orders/1
@@ -69,6 +69,7 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params[:order]
+      params.require(:order).permit(:user_name, :email, :address, :pay_type)
+
     end
 end

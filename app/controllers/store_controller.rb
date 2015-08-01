@@ -14,11 +14,6 @@ class StoreController < ApplicationController
     end
   end
 
-  def checkout
-    @cart = find_cart
-    @order = Order.new
-  end
-
   def empty_cart
     @cart=find_cart
     if @cart.empty!
@@ -42,12 +37,5 @@ class StoreController < ApplicationController
     redirect_to(:action => 'display_cart')
   end
 
-  private
-  def find_cart
-    Cart.find(session[:cart_id])
-  rescue ActiveRecord::RecordNotFound
-    cart = Cart.create
-    session[:cart_id] = cart.id
-    cart
-  end
+
 end
