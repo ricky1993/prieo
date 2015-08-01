@@ -1,33 +1,62 @@
-<%= form_for(@order) do |f| %>
-    <% if @order.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
 
-          <ul>
-            <% @order.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
-
-    <div class="field">
-      <%= f.label :姓名 %><br>
-      <%= f.text_field :user_name %>
+<%=stylesheet_link_tag "check_out.css"%>
+<div id="Check_out" class="container">
+    <div id="Check_title" class="container">
+      <h2>
+        <strong>结算清单</strong>
+      </h2>
     </div>
-    <div class="field">
-      <%= f.label :邮箱 %><br>
-      <%= f.email_field :email %>
+    <div class="container" id="Check_out_content">
+      <div class="form-horizontal">
+        <%= form_for(@order) do |f| %>
+            <!--<% if @order.errors.any? %>-->
+                <!--<div id="error_explanation">-->
+                  <!--<h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>-->
+                  <!--<ul>-->
+                    <!--<% @order.errors.full_messages.each do |message| %>-->
+                        <!--<li><%= message %></li>-->
+                    <!--<% end %>-->
+                  <!--</ul>-->
+                <!--</div>-->
+            <!--<% end %>-->
+              <div class="form-group">
+                <div class="col-md-2 col-md-push-2">
+                  <label class="control-label" >姓名</label>
+                </div>
+                <div class="col-md-4 col-md-push-2 ">
+                  <%= f.text_field :user_name,:placeholder=>'请输入收货人姓名', autofocus: true ,class:'inp' %>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-2 col-md-push-2">
+                  <label class="control-label" >邮箱</label>
+                </div>
+                <div class="col-md-4 col-md-push-2 ">
+                  <%= f.text_field :email,:placeholder=>'请输入收货人邮箱', autofocus: true ,class:'inp' %>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-2 col-md-push-2">
+                  <label class="control-label" >地址</label>
+                </div>
+                <div class="col-md-4 col-md-push-2">
+                  <%= f.email_field :address,:placeholder=>'请输入收货地址', autofocus: true ,class:'inp' %>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-2 col-md-push-2">
+                  <label class="control-label" >支付方式</label>
+                </div>
+                <div class="col-md-4 col-md-push-2">
+                  <%= select_tag(:pay_type, options_for_select([["Select a payment option", ""]] + Order::PAYMENT_TYPES),class:'inp') %>
+                </div>
+              </div>
+            <div class="form-group">
+              <div id="Check_btn"  class="btn btn-default  col-md-4 col-md-push-4">
+                <%= f.submit "确定"%>
+              </div>
+            </div>
+        <% end %>
+      </div>
     </div>
-    <div class="field">
-      <%= f.label :地址 %><br>
-      <%= f.text_field :address %>
-    </div>
-    <div class="field">
-      <%= f.label :price %><br>
-      <%= select_tag(:pay_type, options_for_select([["Select a payment option", ""]] + Order::PAYMENT_TYPES)) %>
-    </div>
-    <div class="actions">
-      <%= f.submit "确定"%>
-    </div>
-<% end %>
+</div>

@@ -27,6 +27,7 @@ Rails.application.config.assets.precompile += %w( Cart_disp.css )
 Rails.application.config.assets.precompile += %w( Product_detail.css )
 Rails.application.config.assets.precompile += %w( store_index.css )
 Rails.application.config.assets.precompile += %w( designer_products.css )
+Rails.application.config.assets.precompile += %w( check_out.css )
 #admin assets
 Rails.application.config.assets.precompile += %w(admin/linecons.css)
 Rails.application.config.assets.precompile += %w(admin/font-awesome.min.css)
