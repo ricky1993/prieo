@@ -14,11 +14,6 @@ class StoreController < ApplicationController
     end
   end
 
-  def checkout
-    @cart = find_cart
-    @order = Order.new
-  end
-
   def empty_cart
     @cart=find_cart
     if @cart.empty!

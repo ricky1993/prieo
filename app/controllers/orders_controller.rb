@@ -31,18 +31,10 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
     @order.add_line_items_from_cart(find_cart)
-    respond_to do |format|
-      if @order.save
-        find_cart.destroy
-        session[:cart_id] = nil
-        format.html { redirect_to store_index_url, notice: 'Thanks for your order.' }
-        format.json { render :show, status: :created, location: @order }
-      else
-        @cart = find_cart
-        format.html { render :new }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
-      end
-    end
+    @order.save
+    find_cart.destroy
+    session[:cart_id] = nil
+    redirect_to store_index_url
   end
 
   # PATCH/PUT /orders/1
@@ -77,6 +69,7 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params[:order]
+      params.require(:order).permit(:user_name, :email, :address, :pay_type)
+
     end
 end
