@@ -72,14 +72,14 @@
         <div class="col-md-10">
           <% for i in 1..7 do %>
               <a href="javascript:" class="siz" >
-                xx.xinc
+                xx.x寸
               </a>
           <% end %>
         </div>
         <div class="col-md-10">
           <% for i in 1..7 do %>
               <a href="javascript:" class="siz" >
-                xx.xinc
+                xx.x寸
               </a>
           <% end %>
         </div>
@@ -105,14 +105,17 @@
 
       <div id="Product_detail_content_buy" >
         <%= link_to controller: '/store',:action => 'add_to_cart', :id => @product.id do %>
-            <div id="Product_detail_content_buy_after" >
-              <%= image_tag("Buy_Button_Hover.jpg")%>
-            </div>
+            <!--<div id="Product_detail_content_buy_after" >-->
+              <!--<%= image_tag("Buy_Button_Hover.jpg")%>-->
+            <!--</div>-->
             <div id="Product_detail_content_buy_before" >
               <%= image_tag("Buy_Button.jpg")%>
             </div>
         <% end %>
-
+      </div>
+      <div id="another" >
+        <a href="javascript:;">点击收藏</a>
+        <br>现在下单，预计<%=Date.today.days_since(10)%> 前发货
       </div>
     </div>
   </div>
@@ -139,12 +142,12 @@
       <%= image_tag("Designer_1.png")%>
     </div>
     <div class="col-md-4 pic_right">
-      <h4>Designer:石溪</h4>
+      <h5>设计师:石溪</h5>
       美国伦比亚大学建筑学硕士，曾任职于UNStudio，Aedas等世界顶级设计事务所。现创立独立设计工作室，任上海交通大学建筑系客座导师。
     </div>
   </div>
   <div class="pic_after">
-    <%= image_tag("Page_pic_0.jpg", class:"first_page")%>
+    <!--<%= image_tag("Page_pic_0.jpg", class:"first_page")%>-->
     <%= image_tag("Page_pic_1.jpg", class:"page_pic")%>
     <%= image_tag("Page_pic_2.jpg", class:"page_pic")%>
     <%= image_tag("Page_pic_3.jpg", class:"page_pic")%>

@@ -104,18 +104,17 @@
 /*商品列表*/
 #Product
 {
-    padding-left:0px;
-    padding-right:0px;
+    padding-left:0;
+    padding-right:0;
     width:1210px;
-    padding-bottom:30px;
+
 }
 
-#Product .row
+.border_line
 {
-    width:1210px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top:15px;
+    width:1200px;
+    height:25px;
+    border-bottom:1px solid #aeaeae ;
 }
 
 .P_1
@@ -230,7 +229,14 @@
 
 
 
+#odds_all
+{
+    width:1200px;
+    padding:0;
+    padding-bottom:30px;
+    border-bottom:1px solid #aeaeae;
 
+}
 /*推荐设计师部分*/
 /*作为背景的满屏*/
 #rec_designer
@@ -320,6 +326,7 @@
 #workshop_container
 {
     padding-bottom:20px;
+    z-index:-10;
 }
 #workshop_title
 {
@@ -346,36 +353,51 @@
     padding-left:0;
     padding-right:0;
 }
-#workshop_mycar
+
+#workshop_container >img
 {
-    width:100%;
-    margin-top:10px;
+    width:1200px;
+    position:absolute;
+    z-index: -1000;
 }
 
-#workshop_mycar:hover .carousel-control.left span
+#workshop_container .btn_out
 {
-    display:inline;
-    position:absolute;
+    text-align:center;
+    margin-top:200px;
+    margin-bottom:130px;
+    z-index: 1500;
 }
-#workshop_mycar:hover .carousel-control.right span
-{
-    display:inline;
-    position:absolute;
-}
+/*#workshop_mycar*/
+/*{*/
+    /*width:100%;*/
+    /*margin-top:10px;*/
+/*}*/
+
+/*#workshop_mycar:hover .carousel-control.left span*/
+/*{*/
+    /*display:inline;*/
+    /*position:absolute;*/
+/*}*/
+/*#workshop_mycar:hover .carousel-control.right span*/
+/*{*/
+    /*display:inline;*/
+    /*position:absolute;*/
+/*}*/
+
 
 #service
 {
     width:1200px;
     padding:0;
     border-bottom:1px solid #dddddd;
-    padding-bottom:20px;
+    padding-bottom:25px;
 }
 #service_title
 {
     padding-top:20px;
     font: 14px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
     text-align:center;
-    padding-bottom:15px;
     border-bottom:1px solid #dddddd;
 }
 #service_title >h1
@@ -387,25 +409,47 @@
     color: #8a8a8a;
 }
 
-.btn_out
+#service >img
 {
-    margin-top:20px;
-    text-align:center;
+    width:1200px;
+    position:absolute;
+    z-index:-10;
 }
+#service .btn_out
+{
+    text-align:center;
+    margin-top:200px;
+    margin-bottom:230px;
+    z-index: 1500;
+}
+
 .title_button
 {
-    width:150px;
-    font: 14px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+    color: #dddddd;
+    background-color:#080808;
+    width:180px;
+    font: 15px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
     margin-left:auto;
     margin-right:auto;
-    border:2px solid #505050;
+    border:1px solid #777777;
+}
+
+.title_button:hover
+{
+    background-color: #fcfcfc;
+    color:#31b0d5;
 }
 .title_button >a
 {
-    color:#505050;
-    font-size:25px;
+    font-size:36px;
+    color: #dddddd;
+    width:100%;
+    padding-left:19px;
+    padding-right:19px;
+    padding-top:8px;
+    padding-bottom:8px;
 }
-.title_button >a:hover
+.title_button >a:hover, .title_button >a:focus
 {
     text-decoration: none;
     color:#31b0d5;
