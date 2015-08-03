@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   namespace :designer do
     get 'home/index'
     resource :product
@@ -6,22 +7,8 @@ Rails.application.routes.draw do
   end
 
 
-  namespace :admin do
-    get 'users/index'
-  end
 
-  namespace :admin do
-    get 'users/new'
-  end
 
-  namespace :admin do
-    get 'users/edit'
-  end
-
-  namespace :admin do
-    get 'users/show'
-    get 'users/delete'
-  end
 
   namespace :admin do
     get 'home/index'
@@ -31,11 +18,26 @@ Rails.application.routes.draw do
     get 'home/contact_us'
     root 'home#login'
 
+    get 'products/delete'
+
     resources :orders
     resources :products
 
-    get 'products/delete'
 
+
+    get 'resources/configure'
+    get 'resources/global'
+    get 'resources/global_header'
+    get 'resources/global_body'
+    get 'resources/global_footer'
+
+    resources :resources
+
+    get 'users/show'
+    get 'users/delete'
+    get 'users/edit'
+    get 'users/new'
+    get 'users/index'
 
   end
 

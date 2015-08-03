@@ -1,0 +1,39 @@
+<br />
+<br />
+<hr />
+<style>
+  #ButtonContent{
+      background: #333333;
+  }
+</style>
+
+
+
+<h1 class="ui center aligned header">欢迎来到资源管理页面</h1>
+
+<h3 class="ui top attached header">全局资源管理</h3>
+<div id="ButtonContent" class="ui attached segment">
+  <div class="ui three column grid">
+    <div class="column"></div>
+    <div class="row">
+      <div class="column"><%= link_to '页头轮播插件管理',admin_resources_global_header_path,class:'ui large button' %></div>
+      <div class="column"><%= link_to '页面图片资源管理',admin_resources_global_body_path,class:'ui large button' %></div>
+      <div class="column"><%= link_to '页脚轮播插件管理',admin_resources_global_footer_path,class:'ui large button' %></div>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<h3 class="ui top attached header">商品资源管理</h3>
+<div id="ButtonContent" class="ui attached segment">
+  <div class="ui three column grid">
+    <div class="column"></div>
+    <div class="row">
+      <div class="column"><button class="ui large button">添加商品图片</button></div>
+      <div class="column"><button class="ui large button">添加商品材质</button></div>
+      <div class="column"><button class="ui large button">添加商品尺寸</button></div>
+    </div>
+  </div>
+</div>
+

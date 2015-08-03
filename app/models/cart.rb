@@ -3,6 +3,9 @@ class Cart < ActiveRecord::Base
   has_many :products, :through => :line_items
   belongs_to :user
 
+
+
+
   def add_product(product_id)
     current_item = line_items.find_by_product_id(product_id)
     if current_item

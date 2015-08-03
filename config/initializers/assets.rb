@@ -15,6 +15,9 @@ Rails.application.config.assets.precompile += %w( cart_show.js )
 Rails.application.config.assets.precompile += %w( Product_detail_selected.js )
 Rails.application.config.assets.precompile += %w( admin/dropdown.min.js )
 Rails.application.config.assets.precompile += %w( admin/sidebar.min.js )
+Rails.application.config.assets.precompile += %w( admin/modal.min.js )
+Rails.application.config.assets.precompile += %w( admin/index.js )
+Rails.application.config.assets.precompile += %w( admin/bootstrap.min.js )
 
 
 
@@ -26,13 +29,10 @@ Rails.application.config.assets.precompile += %w( Cart_disp.css )
 Rails.application.config.assets.precompile += %w( Product_detail.css )
 Rails.application.config.assets.precompile += %w( store_index.css )
 #admin assets
-Rails.application.config.assets.precompile += %w(admin/linecons.css)
-Rails.application.config.assets.precompile += %w(admin/font-awesome.min.css)
-Rails.application.config.assets.precompile += %w(admin/xenon-core.css)
-Rails.application.config.assets.precompile += %w(admin/xenon-forms.css)
-Rails.application.config.assets.precompile += %w(admin/xenon-components.css)
-Rails.application.config.assets.precompile += %w(admin/xenon-skins.css)
-Rails.application.config.assets.precompile += %w(admin/custom.css)
-Rails.application.config.assets.precompile += %w(admin/fonts-useso.css)
+
+
+
+
 Rails.application.config.assets.precompile += %w(admin/sidebar.min.css)
 Rails.application.config.assets.precompile += %w(admin/modal.min.css)
+Rails.application.config.assets.precompile += %w(admin/bootstrap.min.css)

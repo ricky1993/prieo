@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  value: MyString
+  state: false
+  product_id: 1
+  priority: 1
+
+two:
+  name: MyString
+  type: 
+  value: MyString
+  state: false
+  product_id: 1
+  priority: 1

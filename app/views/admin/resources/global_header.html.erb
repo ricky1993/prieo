@@ -1,0 +1,41 @@
+<div class="ui horizontal section divider">资源管理</div>
+<div class="ui celled grid">
+  <% @resources.each do  |resource| %>
+      <% if @count%4 == 0 %>
+          <div class="row">
+      <% end %>
+      <% @count+=1 %>
+    <div class="four wide column">
+
+      <div class="ui link cards">
+      <div class="yellow card">
+        <div class="image">
+          <%= image_tag resource.path_url.to_s,class:'ui fluid image' %>
+        </div>
+        <div class="content">
+          <div class="header"><%= resource.name %></div>
+          <div class="meta">
+            <%= link_to '查看详细信息',admin_resource_path(resource) %>
+          </div>
+          <div class="description"><%= resource.description %></div>
+        </div>
+        <div class="extra content">
+          <% if resource.check? %>
+              <span><i class="checkmark icon"></i>当前资源已选中</span>
+          <% else %>
+              <span><i class="remove icon"></i>当前资源未选中</span>
+          <% end %>
+        </div>
+      </div>
+        </div>
+
+
+    </div>
+      <% if @count%4 == 0 %>
+          </div>
+      <% end %>
+  <% end %>
+</div>
+
+
+

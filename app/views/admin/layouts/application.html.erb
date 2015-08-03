@@ -14,28 +14,25 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'admin/dropdown.min' %>
   <%= javascript_include_tag 'admin/sidebar.min' %>
+  <%= javascript_include_tag 'admin/modal.min' %>
+
 
   <%= csrf_meta_tags %>
 
   <script>
       $(document)
               .ready(function() {
-
 // fix main menu to page on passing
                   $('.main.menu').visibility({
                       type: 'fixed'
                   });
-
                   $('#sidebartoggle').click(function(){
                       $('.ui.sidebar').sidebar('toggle');
                   });
-
-
 // show dropdown on hover
                   $('.main.menu  .ui.dropdown').dropdown({
                       on: 'hover'});
               });
-
   </script>
 
   <style type="text/css">
@@ -142,9 +139,9 @@
 <br />
 
 
-    <div class="ui container">
-      <%= yield %>
-    </div>
+<div class="ui container">
+  <%= yield %>
+</div>
 
 
 </body>
