@@ -1,0 +1,37 @@
+<div class="ui raised very padded text container segment">
+  <h2 class="ui header">详细信息显示</h2>
+  <p>
+    <strong>资源名称:</strong>
+    <%= @resource.name %>
+  </p>
+
+  <p>
+    <strong>资源种类:</strong>
+    <%= @resource.kind %>
+  </p>
+
+  <p>
+    <strong>资源描述:</strong>
+    <%= @resource.description %>
+  </p>
+
+  <p>
+    <strong>资源状态:</strong>
+    <% if @resource.check %>
+        选中
+    <% else %>
+       未选中
+    <% end %>
+  </p>
+
+  <p>
+    <strong>备注:</strong>
+    图片的显示尺寸是为了符合页头轮播插件的尺寸而设定的，因此如果效果跟预想的不一样，请及时更换尺寸
+  </p>
+</div>
+
+<div class="ui fluid container">
+  <%= image_tag @resource.path_url.to_s,:size=>'1600x400' %>
+</div>
+
+

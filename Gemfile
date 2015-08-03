@@ -1,10 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'bootstrap-sass'
-
 source 'https://rails-assets.org' do
   gem 'rails-assets-semantic'
+  #gem 'rails-assets-bootstrap'
 end
+
+gem 'carrierwave'
+
+gem 'kaminari'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'

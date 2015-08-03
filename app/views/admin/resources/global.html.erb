@@ -1,0 +1,10 @@
+<h1 class="ui top attached header"></h1>
+<div class="ui attached segment">
+    <% @resources.each do |resource| %>
+       <%= image_tag resource.path_url.to_s,:size=>'200x400' %>
+    <% end %>
+</div>
+
+
+<h3 class="ui bottom attached header">展示结束</h3>
+<br />

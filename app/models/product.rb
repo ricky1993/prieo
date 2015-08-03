@@ -1,5 +1,6 @@
 class Product < ActiveRecord::Base
   has_many :line_items
+  has_many :properties
   has_many :carts, :through => :line_items
  # before_destroy :ensure_not_referenced_by_any_line_item
 

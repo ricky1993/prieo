@@ -43,11 +43,16 @@ class Admin::ProductsController < ApplicationController
     end
   end
 
+  def delete
+
+  end
+
   # DELETE /products/1
-  # DELETE /products/1.json
+  # DELETE /products/1.js
+
   def destroy
     @product.destroy
-    redirect_to admin_products_url
+    redirect_to admin_products_url, notice: '成功删除'
   end
 
   private
@@ -60,4 +65,6 @@ class Admin::ProductsController < ApplicationController
   def product_params
     params.require(:product).permit(:title, :description, :image_url, :price, :designer)
   end
+
+
 end
