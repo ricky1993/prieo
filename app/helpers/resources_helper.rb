@@ -23,8 +23,8 @@ module ResourcesHelper
 
   def global_head3
     resources = Resource.where(:check => true).order(:created_at=>:desc)
-    if resource.count>=3
-      image_tag resource.third.path_url.to_s,class: 'ui fluid image',size:'1600x440'
+    if resources.count>=3
+      image_tag resources.third.path_url.to_s,class: 'ui fluid image',size:'1600x440'
     elsif resources.count ==2
       if Resource.where.(:check=>[false,nil]).count>=1
         image_tag Resource.where.(:check=>[false,nil]).first.path_url.to_s,class: 'ui fluid image',size:'1600x440'
