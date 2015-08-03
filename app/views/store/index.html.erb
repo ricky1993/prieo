@@ -66,8 +66,26 @@
       </div>
   <% end %>
 </div>
+<div class="container border_line">
+
+</div>
 
 <!--<input type="file" name="uploadFile" />-->
+
+
+<div id="odds_all" class="container">
+  <div id="Recommend">
+    <h1>
+      <strong>不同特惠</strong>
+    </h1>
+    <h4>
+      嘿，点一下，可能会更便宜哦
+    </h4>
+  </div>
+  <%=image_tag("odds.jpg", width:"100%")%>
+</div>
+
+
 <div id="rec_designer" class="container">
   <div id="Recommend">
     <h1>
@@ -119,13 +137,13 @@
 <div id="service" class="container">
   <div id="service_title">
     <h1>
-      <strong>定制服务</strong>
+      <strong>不同定制</strong>
     </h1>
     <h4>
-      快来实现您的专属3D打印设计
+      我们愿以自己的努力，助您变得与众不同
     </h4>
   </div>
-  <%=image_tag("service_1.jpg")%>
+  <%=image_tag("make_dif.jpg")%>
   <div class="btn_out">
     <div class="title_button ">
       <a href="javascript:;">
@@ -137,31 +155,19 @@
 <div id="workshop" class="container">
   <div id="workshop_title">
     <h1>
-      <strong>云阈工作室</strong>
+      <strong>不同工作室</strong>
     </h1>
     <h4>
-      我们致力于研究并推广原创3D打印设计
+      这里真的不知道怎么自夸，你还是来亲眼见证下吧
     </h4>
   </div>
 </div>
 <div id="workshop_container" class="container">
-  <div id="workshop_mycar" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="item active">
-        <%=image_tag("workshop_1.jpg")%>
-      </div>
-    </div>
-    <a class="left carousel-control  " href="#workshop_mycar" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" ></span>
-    </a>
-    <a class="right carousel-control " href="#workshop_mycar" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    </a>
-  </div>
+  <%=image_tag("workshop.jpg")%>
   <div class="btn_out ">
     <div class="title_button ">
       <a href="javascript:;">
-        来闯一闯
+        马上加入
       </a>
     </div>
   </div>

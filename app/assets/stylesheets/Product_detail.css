@@ -1,4 +1,32 @@
 
+#one
+{
+    padding-top:20px;
+    padding-left:0;
+    padding-right:0;
+    width:1000px;
+    margin-bottom:20px;
+}
+
+
+#title_col
+{
+    width:600px;
+    margin-left:30px;
+}
+
+.title_unit
+{
+    width:110px;
+    margin-right:10px;
+}
+
+.Edit_title_up
+{
+    width:125px;
+    padding:0;
+}
+
 #Product_detail
 {
     margin-top:10px;
@@ -317,15 +345,30 @@ a:hover
 
 #Product_detail_content_buy_before :hover
 {
-    opacity:0;
+
     cursor:pointer;
     /*background-image: url(/Image/Buy_Button_Hover.jpg);*/
 }
 
-#Product_detail_content_buy_after
+#another
 {
-    position:absolute;
+    padding-top:10px;
+    margin-left:240px;
 }
+
+#another >a
+{
+    color:#31b0d5;
+}
+#another >a:hover, #another >a:focus
+{
+    text-decoration: none;
+    color:#31b0d5;
+}
+/*#Product_detail_content_buy_after*/
+/*{*/
+    /*position:absolute;*/
+/*}*/
 
 /*轮播导航和设计师说明*/
 #Product_detail_before_pic
@@ -334,6 +377,7 @@ a:hover
     width:1000px;
     padding:0;
     vertical-align:middle;
+
 }
 
 #Product_detail_before_pic .pic_left
@@ -347,18 +391,28 @@ a:hover
 #Product_detail_before_pic .pic_middle
 {
     margin-top:10px;
-    margin-left:15px;
+    margin-left:5px;
     vertical-align:middle;
     width:120px;
+}
+
+#Product_detail_before_pic .pic_middle >img
+{
+    width:90px;
+    height:90px;
 }
 #Product_detail_before_pic .pic_right
 {
     width:370px;
-    color: #eaeaea;
+    color: #141414;
     margin-top:2px;
-    line-height:1.5;
+    line-height:1.2;
 }
 
+#Product_detail_before_pic .pic_right >h5
+{
+    font-size:16px;
+}
 
 #Product_detail_before_pic .first_page
 {
@@ -367,10 +421,13 @@ a:hover
 
 #Product_detail_before_pic .pic_before
 {
-    position:absolute;
+    /*position:absolute;*/
     width:1000px;
     z-index:15;
     padding:0;
+    padding-bottom:10px;
+    border-bottom:1.5px solid #080808;
+    margin-bottom:10px;
 }
 
 .page_pic
