@@ -33,7 +33,7 @@ class StoreController < ApplicationController
   def add_to_cart
     product = Product.find(params[:id].to_i)
     @cart = find_cart
-    @cart.add_product(product.id)
+    @cart.add_product(product.id, product.title, product.price)
     redirect_to(:action => 'display_cart')
   end
 
