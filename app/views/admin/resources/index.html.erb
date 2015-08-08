@@ -30,10 +30,16 @@
   <div class="ui three column grid">
     <div class="column"></div>
     <div class="row">
-      <div class="column"><button class="ui large button">添加商品图片</button></div>
+      <div class="column"><%= link_to '商品图片',admin_resources_product_path,class:'ui large button' %></div>
       <div class="column"><button class="ui large button">添加商品材质</button></div>
       <div class="column"><button class="ui large button">添加商品尺寸</button></div>
     </div>
   </div>
 </div>
+
+<div class="ui divider">
+  <br />
+</div>
+
+<%= link_to '新增资源',new_admin_resource_path,class:'ui large button' %>
 

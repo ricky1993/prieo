@@ -1,0 +1,84 @@
+<div class="ui horizontal section divider">资源管理</div>
+<div class="ui celled grid">
+  <% @resources.each do  |resource| %>
+      <% if @count%4 == 0 %>
+          <div class="row">
+      <% end %>
+      <% @count+=1 %>
+      <div class="four wide column">
+
+        <div id="card<%= resource.id %>"  class="ui link cards">
+          <div class="yellow card">
+            <div class="image">
+              <%= image_tag resource.path_url.to_s,class:'ui fluid image' %>
+            </div>
+            <div class="content">
+              <div class="header"><%= resource.name %></div>
+            </div>
+            <div class="extra content">
+              <% if resource.check? %>
+                  <span><i class="checkmark icon"></i>当前资源已选中</span>
+              <% else %>
+                  <span><i class="remove icon"></i>当前资源未选中</span>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="modal<%= resource.id %>" class="ui modal">
+        <i class="close icon"></i>
+        <div class="header">
+          资源详细信息展示
+        </div>
+        <div class="image content">
+          <div class="ui medium image">
+            <%= image_tag resource.path_url.to_s %>
+          </div>
+          <div class="description">
+            <div class="ui header"><%= resource.name %></div>
+            <p><%= resource.description %></p>
+            <p>
+            <div class="ui attached segment">
+              <%= form_tag(admin_resources_check_path,:class=>'ui form',:method =>:get) do %>
+                  <div class="field">
+                    <%= check_box_tag :check  %> 选中即为默认显示
+                  </div>
+                  <div class="actions">
+                    <%= submit_tag '确定',class:'ui small button' %>
+                    <%= hidden_field_tag :id,resource.id %>
+                  </div>
+              <% end %>
+            </div>
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="actions">
+          <div class="ui black deny button">
+            关闭
+          </div>
+        </div>
+      </div>
+
+      <script>
+          $(document).ready(function(){
+              $('#card<%= resource.id %>').click(function(){
+                  $('#modal<%= resource.id %>')
+                          .modal('show');
+              })
+          })
+      </script>
+      <% if @count%4 == 0 %>
+          </div>
+      <% end %>
+  <% end %>
+</div>
+
+
+
+
+
