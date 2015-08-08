@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150804152014) do
+=======
+ActiveRecord::Schema.define(version: 20150805114742) do
+>>>>>>> ccaec4c655cd3f0ac3d3c2791712d320ffd47784
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -75,6 +79,7 @@ ActiveRecord::Schema.define(version: 20150804152014) do
     t.boolean  "check"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "product_id"
   end
 
   create_table "roles", force: :cascade do |t|

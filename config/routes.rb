@@ -26,10 +26,16 @@ Rails.application.routes.draw do
 
 
     get 'resources/configure'
-    get 'resources/global'
     get 'resources/global_header'
     get 'resources/global_body'
     get 'resources/global_footer'
+    get 'resources/new_global'
+    get 'resources/product'
+    get 'resources/check'
+    get 'resources/product_picture'
+
+
+    get 'resources/new_product'
 
     resources :resources
 
