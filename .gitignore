@@ -16,4 +16,4 @@
 !/log/.keep
 /tmp
 alipay.rb
-workspace.xml
+.idea/workspace.xml
