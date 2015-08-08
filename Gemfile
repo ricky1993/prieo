@@ -8,6 +8,8 @@ end
 gem 'carrierwave'
 
 gem 'kaminari'
+gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'

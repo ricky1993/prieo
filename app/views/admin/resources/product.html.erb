@@ -1,0 +1,75 @@
+<div class="ui horizontal section divider">资源管理</div>
+<div class="ui celled grid">
+  <% @resources.each do  |resource| %>
+      <% if @count%4 == 0 %>
+          <div class="row">
+      <% end %>
+      <% @count+=1 %>
+      <div class="four wide column">
+
+        <div id="card<%= resource.id %>"  class="ui link cards">
+          <div class="yellow card">
+            <div class="image">
+              <%= image_tag resource.path_url.to_s,class:'ui fluid image' %>
+            </div>
+            <div class="content">
+              <div class="header"><%= resource.name %></div>
+              <% if resource.product_id !=nil %>
+                 <p>关联商品ID: <%= resource.product_id %></p>
+                 <% if Product.find(resource.product_id)==nil %>
+                    <p>该图片未关联任何商品</p>
+                 <% else %>
+                    <p>管理商品名称: <%= Product.find(resource.product_id).title %></p>
+                 <% end %>
+              <% end %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="modal<%= resource.id %>" class="ui modal">
+        <i class="close icon"></i>
+        <div class="header">
+          资源详细信息展示
+        </div>
+        <div class="image content">
+          <div class="ui medium image">
+            <%= image_tag resource.path_url.to_s %>
+          </div>
+          <div class="description">
+            <div class="ui attached segment">
+              <div class="ui header"><%= resource.name %></div>
+              <p><%= resource.description %></p>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="actions">
+          <div class="ui black deny button">
+            关闭
+          </div>
+        </div>
+      </div>
+
+      <script>
+          $(document).ready(function(){
+              $('#card<%= resource.id %>').click(function(){
+                  $('#modal<%= resource.id %>')
+                          .modal('show');
+              })
+          })
+      </script>
+      <% if @count%4 == 0 %>
+          </div>
+      <% end %>
+  <% end %>
+</div>
+
+
+
+
+

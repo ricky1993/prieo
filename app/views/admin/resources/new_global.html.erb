@@ -1,0 +1,214 @@
+<h2 class="ui top attached header">新增管理资源</h2>
+<div class="ui attached segment">
+
+  <div class="ui attached segment">
+    <p><div class="ui form">
+    <%= form_for @resource,url: {action:'create',controller:'admin/resources',:id=>@resource.id,class:'ui form segment'} do |f| %>
+        <% if @resource.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@resource.errors.count, "error") %>禁止保存:</h2>
+
+              <ul>
+                <% @resource.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+
+
+        <div class="field">
+          <%= f.label :资源名称 %><br>
+          <%= f.text_field :name %>
+        </div>
+
+
+        <div class="field">
+          <%= f.label :资源类型 %><br>
+          <%= f.select :kind,[Resource::GLOBAL_HEADER,Resource::GLOBAL_BODY,Resource::GLOBAL_FOOTER]%>
+        </div>
+
+        <div class="field">
+          <%= f.label :描述 %>
+          <%= f.text_area :description   %>
+        </div>
+
+        <div class="field">
+          <%= f.check_box :check,class:"ui checkbox"%>选中即为默认显示
+        </div>
+
+        <div class="field">
+          <%= f.label :上传图片 %>
+          <%= f.file_field :path,:id=>'carpoolpic2',:onchange=>'changesrc(this)' %>
+          <%= f.hidden_field :path_cache %>
+
+          <h3>预览：</h3>
+          <img src="" alt="" id="prev" height="200" width="340" />
+        </div>
+        当前选择文件大小：
+        <div id="fileSize"></div>
+
+
+        <div class="actions">
+          <button class="red ui button" type="submit">确认添加</button>
+          <div class="ui error message"></div>
+        </div>
+    <% end %>
+  </div></p>
+  </div>
+</div>
+<br />
+
+
+<script>
+    $(document).ready(function() {
+        $('.ui.form')
+                .form({
+                    fields: {
+                        name: {
+                            identifier: 'resource[name]',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: '请输入资源名称'
+                                }
+                            ]
+                        },
+                        description:{
+                            identifier:'resource[description]',
+                            rules:[
+                                {
+                                    type:'empty',
+                                    prompt:'请输入资源描述'
+                                }
+                            ]
+                        },
+                        kind: {
+                            identifier: 'resource[kind]',
+                            rules: [
+                                {
+                                    type: 'minCount[1]',
+                                    prompt: '请选择一种资源类型'
+                                }
+                            ]
+                        }
+                    }
+                })
+    });
+</script>
+
+
+<script type="text/javascript">
+
+    var flag = true;
+    /**预览图片*/
+    function changesrc(sender) {
+        sender_id = sender.id;
+        var imgSrc = document.getElementById(sender_id).value;
+        var t = document.getElementById(sender_id);
+        if (imgSrc == "") {
+            flag = false;
+            return false;
+        }
+        if (checkType('jpg,bpm,png,jpeg',imgSrc) == false) {
+            document.getElementById(sender_id).value = "";
+            alert("图片格式不正确!");
+            flag = false;
+            return false; //如果不是jpg返回false
+        } else {
+            var imgs = document.createElement("img");
+            imgs.src = imgSrc;
+
+            ////判断图片大小
+            if (fileChange(sender) > 1000 * 1024) {
+                alert("图片大小不能超过 1000 KB!");
+                flag = false;
+                return false; //超过50K返回false
+            }
+            ////
+            flag = true;
+        }
+        if (isFirefox = navigator.userAgent.indexOf("IE") > 0) {
+            document.getElementById("prev").src = imgSrc;
+        }else{
+            document.getElementById("prev").src = window.URL.createObjectURL(t.files[0]);
+        }
+    }
+
+    /**判断图片类型*/
+    function checkType(types,imgSrc){
+        var typeArr = types.split(",");
+        var rg;
+        var length = typeArr.length;
+        var sb=new StringBuilder();
+
+        for(var i = 0, len = length; i < len; i++) {
+            rg = '/(.*?)\.'+typeArr[i]+'$/.test(imgSrc.toLowerCase())';
+            if(i+1 != length)
+                rg = rg + " || ";
+            sb.append(rg);
+        }
+        return eval(sb.toString());
+    }
+
+    /**够造StringBuilder*/
+    function StringBuilder(){
+        this._strings_=new Array;
+    }
+    StringBuilder.prototype.append=function(str){
+        this._strings_.push(str);
+    };
+    StringBuilder.prototype.toString=function(){
+        return this._strings_.join("");
+    };
+
+
+
+    //文件大小
+    var isIE = /msie/i.test(navigator.userAgent) && !window.opera;
+    var sizeLabel = ["B", "KB", "MB", "GB"];
+    //获取文件大小
+    function fileChange(target) {
+
+        var fileSize = 0;
+
+        if (isIE && !target.files) {
+            var filePath = target.value;
+            var fileSystem = new ActiveXObject("Scripting.FileSystemObject");
+            var file = fileSystem.GetFile (filePath);
+            fileSize = file.Size;
+        } else {
+            fileSize = target.files[0].size;
+        }
+        displayFileSize(fileSize);
+        return fileSize;
+    }
+
+    //显示文件大小
+    function displayFileSize(size) {
+        var fileSize = document.getElementById("fileSize");
+        fileSize.innerHTML = calFileSize(size);
+    }
+
+    //计算文件大小 返回格式化后的字符串 xx kb  xx Mb
+    function calFileSize(size) {
+        for (var index = 0; index < sizeLabel.length; index++) {
+
+            if (size < 1024) {
+                return round(size, 2) + sizeLabel[index];
+            }
+
+            size = size / 1024;
+        }
+
+        return round(size, 2) + sizeLabel[index];
+    }
+
+    function round(number, count) {
+        return Math.round(number * Math.pow(10, count)) / Math.pow(10, count);
+    }
+
+</script>
+
+
+<br /><br />

@@ -11,8 +11,8 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag 'admin/sidebar.min' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'admin/dropdown.min' %>
+
+  <%= javascript_include_tag 'application' %>
   <%= javascript_include_tag 'admin/sidebar.min' %>
   <%= javascript_include_tag 'admin/modal.min' %>
 
@@ -22,16 +22,14 @@
   <script>
       $(document)
               .ready(function() {
-// fix main menu to page on passing
                   $('.main.menu').visibility({
                       type: 'fixed'
                   });
-                  $('#sidebartoggle').click(function(){
-                      $('.ui.sidebar').sidebar('toggle');
-                  });
-// show dropdown on hover
                   $('.main.menu  .ui.dropdown').dropdown({
                       on: 'hover'});
+                  $('#siderbarshow').click(function(){
+                      $('.ui.sidebar').sidebar('toggle');
+                  });
               });
   </script>
 
@@ -57,13 +55,17 @@
 </head>
 
 <body>
+
+
+
+
 <div class="ui fixed inverted menu">
   <div class="ui container">
     <div href="#" class="header item">
       <%= image_tag 'logo.png',:class=>'logo' %>
-      Prieo
     </div>
     <a href="#" class="item">主页</a>
+    <a id="siderbarshow" class="item">边栏</a>
     <a href="#" class="ui simple dropdown item">
       Dropdown <i class="dropdown icon"></i>
       <div class="menu">
@@ -82,17 +84,18 @@
         <div class="item">Link Item</div>
       </div>
     </a>
-    <div class="item">
-      <a>
-        <i class="user icon"></i>
-        我的空间
-      </a>
-    </div>
-    <div class="right item">
-      <div class="ui action left icon input">
-        <i class="search icon"></i>
-        <input type="text" placeholder="Search...">
-        <div class="ui teal button">搜索</div>
+    <div class="right menu">
+      <div class="item">
+        <div class="ui transparent inverted icon input">
+          <i class="search icon"></i>
+          <input type="text" placeholder="Search">
+        </div>
+      </div>
+      <div class="item">
+        <a>
+          <i class="user icon"></i>
+          我的空间
+        </a>
       </div>
     </div>
 
@@ -100,7 +103,7 @@
 </div>
 
 
-<div class="ui left vertical inverted labeled icon sidebar overlay visible menu">
+<div class="ui left demo vertical inverted sidebar labeled icon menu">
   <a class="item">
     <i class="home icon"></i>
     主页
@@ -127,6 +130,10 @@
   <a class="item">
     <i class="shop icon"></i>
     商店
+  </a>
+  <a href="/admin/resources" class="item">
+    <i class="book icon"></i>
+    资源
   </a>
   <a class="item">
     <i class="settings icon"></i>

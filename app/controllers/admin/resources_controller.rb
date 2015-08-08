@@ -3,14 +3,24 @@ class Admin::ResourcesController < ApplicationController
 
 
   def global_header
-    @resources = Resource.where(:kind =>Resource::GLOBAL_HEADER).order(:created_at=>:desc)
     @count = 0
+    @resources = Resource.where(:kind =>Resource::GLOBAL_HEADER).order(:created_at=>:desc)
     render :layout => 'admin/layouts/application'
   end
 
+  def check
+    @resource = Resource.find(params[:id].to_i)
+    @resource.check=params[:check]
+    if @resource.save
+      redirect_to admin_resources_global_header_url,notice: '成功修改'
+    else
+      redirect_to admin_resources_global_header_url,notice: '修改失败'
+    end
+  end
+
   def global_body
-    @resources = Resource.where(:kind => Resource::GLOBAL_BODY).order(:created_at=>:desc)
     @count = 0
+    @resources = Resource.where(:kind => Resource::GLOBAL_BODY).order(:created_at=>:desc)
     render :layout => 'admin/layouts/application'
   end
 
@@ -20,28 +30,23 @@ class Admin::ResourcesController < ApplicationController
     render :layout => 'admin/layouts/application'
   end
 
-  def global
-    @resources = Resource.where(:kind=>Resource::GLOBAL)
-    render :layout => 'admin/layouts/application'
-  end
-
   def product
-    @resources = Resource.where(:kind =>Resource::PRODUCT )
+    @count = 0
+    @resources = Resource.where(:kind =>Resource::PRODUCT ).order(:created_at=>:desc)
     render :layout => 'admin/layouts/application'
   end
 
-
-
+  def product_picture
+    @count = 0
+    @resource = Resource.where(:kind => Resource::PRODUCT).where(:product_id => params[:product_id]).order(:created_at=> :desc)
+  end
 
   def configure
   end
 
-
-
   # GET /resources
   # GET /resources.json
   def index
-    @resources = Resource.all
     render :layout => 'admin/layouts/application'
   end
 
@@ -52,7 +57,12 @@ class Admin::ResourcesController < ApplicationController
   end
 
   # GET /resources/new
-  def new
+  def new_global
+    @resource = Resource.new
+    render :layout => 'admin/layouts/application'
+  end
+
+  def new_product
     @resource = Resource.new
     render :layout => 'admin/layouts/application'
   end
@@ -110,7 +120,7 @@ class Admin::ResourcesController < ApplicationController
   end
 
   def resource_params
-    params.require(:resource).permit(:name,:kind,:check,:description,:path)
+    params.require(:resource).permit(:name,:kind,:check,:description,:path,:product_id)
   end
 
 end

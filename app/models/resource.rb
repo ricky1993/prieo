@@ -1,4 +1,6 @@
 class Resource < ActiveRecord::Base
+  belongs_to :product
+
   #使用常量定义资源的类型
   GLOBAL_HEADER = '全局页头图片插件'
   GLOBAL_FOOTER = '全局页脚图片插件'
