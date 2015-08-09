@@ -1,0 +1,295 @@
+/*总container*/
+
+#one
+{
+    padding-top:20px;
+    padding-left:0;
+    padding-right:0;
+    width:1200px;
+    margin-bottom:20px;
+}
+
+/*页头*/
+#title_col, #title_col .col-md-2 ,#title_col .col-md-9, #title_col .col-md-3
+{
+    padding:0;
+}
+
+#title_col
+{
+    margin-left:30px;
+}
+/*页头logo*/
+#title_pic
+{
+    margin-top:3px;
+}
+#title_pic >a
+{
+
+    background-image:url(../images/logo.png);
+}
+
+/*页头的标题*/
+.title_unit
+{
+    margin-right:20px;
+}
+.title_unit_pic
+{
+    width:25px;
+    height:25px;
+}
+.title_unit_pic >img
+{
+    width:100%;
+}
+.title_unit_content
+{
+    margin-top:5px;
+    text-align:center;
+    line-height:1.2;
+}
+.title_unit_content .title
+{
+    color: #707070;
+    font-size:16px;
+}
+.title_unit_content .title:hover
+{
+    cursor:pointer;
+    color: #4aa8ae;
+    font-weight:bold;
+    text-decoration: none;
+}
+.title_unit_content .second_title
+{
+    font-size:10px;
+    color:#aeaeae;
+}
+
+ .Edit_title_up
+{
+    font-size:16px;
+    color:#080808;
+}
+ .Edit_title_up >a
+{
+    font-size:16px;
+    color:#080808;
+}
+
+.Edit_title_up_right
+{
+    font-size:16px;
+    color:#080808;
+    text-align:right;
+}
+
+
+#title_row
+{
+    padding-top:10px;
+    font: 16px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+}
+
+#title_row .col-md-5, .col-md-7, .col-md-3, .col-md-9
+{
+    padding:0;
+}
+
+#title_col h4
+{
+    color:#000000;
+}
+
+
+
+
+
+/*悬浮窗口*/
+#adver_all
+{
+    width:100%;
+    margin-right:50px;
+    text-align:right;
+}
+
+#adver
+{
+    width:34px;
+    right:0;
+    left:auto;
+    bottom:30px;
+    background-color:transparent;
+    border-color:transparent;
+}
+
+
+#adver .nav_butt
+{
+    padding:6px;
+    background-color:#080808;
+}
+
+#adver .nav_butt >img
+{
+    width:22px;
+}
+
+#share
+{
+    right:35px;
+    left:auto;
+    width:320px;
+    margin-left:-320px;
+    color: #e1e1e1;
+    text-align:right;
+    font: 16px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+}
+
+#adver_all .share_close
+{
+    bottom:-300px;
+    /*transition: bottom 0.5s linear;*/
+}
+
+#adver_all .share_open
+{
+    bottom:30px;
+    transition: bottom 0.5s linear;
+}
+
+#share .share_head
+{
+    background-color: #000000;
+    font-size:15px;
+    font-weight:bold;
+    height:40px;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:10px;
+}
+
+#share .title
+{
+    margin-right:115px;
+}
+
+#butt_close:hover
+{
+    cursor:pointer;
+}
+#share .share_body
+{
+    height:250px;
+    background-color: rgba(0,0,0,0.9);
+}
+#share .share_unit
+{
+    margin-top:30px;
+    text-align:center;
+}
+
+#share .share_butt
+{
+    color: #8b8b8b;
+    font-size:10px;
+}
+
+#share .share_butt:hover, #share .share_butt:focus
+{
+    text-decoration: none;
+    color: #dadada;
+}
+
+#share .share_butt>img
+{
+    background: #464646;
+    border-radius: 5px;
+    width:50px;
+    margin-bottom:10px;
+}
+
+#share .share_butt>img:hover
+{
+    background: #888888;
+}
+
+#myModal
+{
+    text-align:center;
+}
+#myModal .modal-dialog
+{
+    width:300px;
+}
+#myModal .modal-body >img
+{
+    width:200px;
+}
+
+/*页尾部分*/
+#web_tail
+{
+    background: #080808;
+    width:100%;
+    height:300px;
+}
+#web_tail_content
+{
+    width:1200px;
+    padding-left:0px;
+    padding-right:0px;
+}
+#web_tail .row
+{
+    /*margin-top: 20px;*/
+    /*border-top:3px solid rgba(211, 211, 211, 0.43);*/
+    margin-left:0;
+    margin-right:0;
+    border-bottom:1px inset rgba(176, 176, 176, 0.81);
+}
+#tail_1, #tail_2, #tail_3 , #tail_4
+{
+    padding-left:0;
+    padding-right:0;
+    border-left: 0px inset rgba(176, 176, 176, 0.27);
+    text-align:left;
+    height:230px;
+}
+#tail_1
+{
+    border-left: 0px solid rgba(211, 211, 211, 0.28);
+}
+#web_tail .row .col-md-3>h4
+{
+    padding-left:40px;
+    padding-top:20px;
+    font: 18px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+    color: #aeaeae;
+    padding-bottom: 15px;
+}
+#web_tail .row .col-md-3>h5
+{
+    padding-left:40px;
+    font: 15px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+    color: #aeaeae;
+    padding-bottom: 20px;
+    width:250px;
+}
+
+#web_tail .row .col-md-3>h5 >img
+{
+    width:55px;
+    height:55px;
+}
+
+#web_tail_content >h5
+{
+    padding-top:12px;
+    padding-left:40px;
+    font: 15px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+    color: #9c9c9c;
+    padding-bottom: 20px;
+}

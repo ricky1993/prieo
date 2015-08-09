@@ -2,32 +2,123 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c923ce25-2005-470b-86cb-b0439b43a567" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/resources/global_body.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/resources/global_footer.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/resources/new_global.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/resources/new_product.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/resources/product.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/resources/product_picture.html.erb" />
-      <change type="DELETED" beforePath="C:\Sites\prieo\app\views\admin\resources\global.html.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/5-21dc8bbc1d5ec520e2bd490c2006524ed52ddbacb088a9bac90fa7024971195c.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/6-d1fd6ac9cf58d908f5eacbf702ef71db4b069457258bda66c5e14d871423f971.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/7-5bd719f932fc29478f6d72920ed942502927ec175e9bffd5d07fa08aa28712fe.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/8-46f2d01411a5135bec390d91c054a827d572bd16d378d1ec517ab963163239db.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Button_Reg-77f8e9badf04966bf174d380ce30e0001203c54779e166dd311cc1998b09604a.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Button_back-b5d915357a3592984423c795ce631fb61dc8d57e71e225ca8c3aa5d0615646e0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Button_cart-fab74f04e870be30c5f3fc25d2d9e4ece946b521e8ddea4c0df1d95a20b54017.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Button_close-27be050c5ec14c7e2f3d8db9a7ccce282ec704bec87bcf1bb01650b4129610c7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Button_login-d0fbd5fa18b89feb08d4b0dd61a6b61766027b822bbd1b3be4222f4bb1c80815.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Button_share-8ad8695dfe8c7585c23fa7ca708a33041844bcb3601d4c5bbf78ec92071bfa37.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Buy_Button-27c5bd143034b4f8a5015810edfc0266d979aa40b6202d6f6bb7f9d2d671e16c.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Buy_Button_Hover-6e1277ba1f368d9d248e41337b9cf65e86525c6a4b03bd6fa61bc9881eaa1649.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Cart_1-4e43923a5fc17fdf85729da9d735825bdc316c894c444e929486f29841842217.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Designer_1-6c8b2248233712c9abd64a225efe5f4e8a80e6076c5dbd5ec6acf8eaafdd7251.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Other_1-f5cdfaf46cb1ec3e67372b54584520a7148e49c1a84f27d0282e56b8582dd843.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Other_2-b90ee2e5e36f2cd689f03c6a8cadad2c7a8cb05c3f34c40eb08cf2633fe7c672.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Other_3-44a3770d6a3e92febfc0de89efd33d87a01daa07254aa590450521b33442176c.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Other_4-5b57dcc41d136d9aef3257d624c08625de8a9dd18acff3152e0e6c60b247e1bb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Page1-5e736b2f8fe85978665ceed1231385f1d999449caaae5904df378d721d110201.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Detail_Car/Page1-ffc1f8864685a688b9efb238a726d00f3707111262b7f2d5927b8a53ada1b5f5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Page2-12ce5c4638eee8a5786a86fcda095be7cba2938ad49a323d4a20496d22fabd2b.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Detail_Car/Page2-1e043856f8a6d3abe97823acd8e684f7a5f4fbe31a5d3ee133867f58e7c137c8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Detail_Car/Page3-1d9f5beffa41696cf4756b66351a1ae9298c48ec6b9e3c2918013a44d9b0f584.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Page3-3b1fd25d873fe9354f8ce256a0f1275730af1d32aa4250b13d16beca617ca09e.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Detail_Car/Page4-6bf98aee9911c8f80c7511614ba3b51c6504f589d460d586de0b2684a14bfb27.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Page4-82ef975a064b4a1c850192dac9bf7a2567d8f926e4ab1a3ba136ac52fd3c3806.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Page_pic_0-8aa286cbdc7d217cbf41a4b84bbfa57f97495f7e4419d8b95129aa954f05217e.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Page_pic_1-eaa3c6c0b6901df99c3651882828a969c3e168ea4df66586bb424a3653c96c6c.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Page_pic_2-a3c501fe029ba28e8cb51d7957922ee60b7c718fdec0521f34aaa55c368d380d.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Page_pic_3-f099d5d05b84fe74db04cae415e436414b2ccb6a4b103e8b19e1faae1bee9cd4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Page_pic_4-2089c849367fe5837aa7df9886251cad25a382bd19d5b71a61201ee6c77528ec.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Page_pic_5-604d0457dfc430ec195773cb646ee19d857ed00d8ecdcf2e61804b90ef599226.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Right-a50b0c6457e85a7cac9d4ff7b409325a73891bceff6a2236d50a31662323cc6f.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Mat/Roseking-cfda8c8e45cfccfd764be9247fa03162d03ea5c68d5b90cebfdadd31e94f275e.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Top-965b70fb408f377a5fcf6c426ce6f2bb797f8be6f0087e41a2430f3a32d111f1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bottom-ebd044c691beb3fcda928bb10d2038648ec2c6024596667ff895bd52bfb2a858.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/button_buy-9220a587867c11e842e5ffb3489c9d5250444f8db6ea751bff3b15ce6c51d778.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/button_des-213407c5439da955be09649cf50c09b28793d83de4c2a227b03105a5e9db139b.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/button_learn-ad76bb8aaa8372378a938b0c6b5090674c752e5d49c5d86153e80750db05342d.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/button_make-a5f3c09fa040934948f7c4594a3092825cc91770e2637c4380abdb384dd856c4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/button_rand-69a7892313f79fd0d8409f3407936beed993beb2afec1bd1edf8de2e0dc7f5d0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/share/db_icon-cd8c6eb37276e2a0668d018c55bf4756e509274a4ad723279dacd74a844d5894.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/share/ewm_icon-7bcd684e2eff5672b975716e6ca163a34219bd3aa8eb20173eb23cf63e1b775b.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/dist/themes/default/assets/images/flags-94d5c7f1661301c4a6dc491d72dd559a0620cd917a826f0df1b023bb96ea9ddd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/src/themes/default/assets/images/flags-94d5c7f1661301c4a6dc491d72dd559a0620cd917a826f0df1b023bb96ea9ddd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic-ui/flags-e46642070b973f0f3ac0a784c50381316681b1611e2690d0f9fdcd26a27901b1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/dist/themes/basic/assets/fonts/icons-1070e683620bea019189b4e87828812de61ae59686727ff577c56c585e36bbc5.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/src/themes/basic/assets/fonts/icons-1070e683620bea019189b4e87828812de61ae59686727ff577c56c585e36bbc5.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/dist/themes/basic/assets/fonts/icons-43ae86d101d934cb2c978ee099df24ce224d27d30923783441a015bb6dc1ae77.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/src/themes/basic/assets/fonts/icons-43ae86d101d934cb2c978ee099df24ce224d27d30923783441a015bb6dc1ae77.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/dist/themes/basic/assets/fonts/icons-8fd3ec704039a10dd8baa15b7e7d98e0c704154e1ba89cfef66abdfa90bc6414.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/src/themes/basic/assets/fonts/icons-8fd3ec704039a10dd8baa15b7e7d98e0c704154e1ba89cfef66abdfa90bc6414.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic-ui/icons-9e540a087924a6e64790149d735cac022640e4fa6bff6bd65f5e9f41529bf0b3.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/dist/themes/default/assets/fonts/icons-9e540a087924a6e64790149d735cac022640e4fa6bff6bd65f5e9f41529bf0b3.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/src/themes/default/assets/fonts/icons-9e540a087924a6e64790149d735cac022640e4fa6bff6bd65f5e9f41529bf0b3.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic-ui/icons-aadc3580d2b64ff5a7e6f1425587db4e8b033efcbf8f5c332ca52a5ed580c87c.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/dist/themes/default/assets/fonts/icons-aadc3580d2b64ff5a7e6f1425587db4e8b033efcbf8f5c332ca52a5ed580c87c.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/src/themes/default/assets/fonts/icons-aadc3580d2b64ff5a7e6f1425587db4e8b033efcbf8f5c332ca52a5ed580c87c.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic-ui/icons-bdc5d0b9f397be83e886c74b0141d1954aa4384b359dce49829994c4a2e1f7bf.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/dist/themes/default/assets/fonts/icons-bdc5d0b9f397be83e886c74b0141d1954aa4384b359dce49829994c4a2e1f7bf.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic-ui/icons-cbb644d0ee730ea57dd5fbae35ef5ba4a41d57a254a6b1215de5c9ff8a321c2d.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/dist/themes/default/assets/fonts/icons-cbb644d0ee730ea57dd5fbae35ef5ba4a41d57a254a6b1215de5c9ff8a321c2d.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/src/themes/default/assets/fonts/icons-cbb644d0ee730ea57dd5fbae35ef5ba4a41d57a254a6b1215de5c9ff8a321c2d.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic-ui/icons-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/dist/themes/default/assets/fonts/icons-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/src/themes/default/assets/fonts/icons-e3870de89716b72cb61a4bba0e17c75783b361cdaba35ea96961c3070bd8ca18.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/share/kx_icon-bce1640337377a5f666f43233b0e35f8cd015494b23d13d244d9e9b2e6647133.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/logo-433774a15ff47456d29637d5a95752ec622eeac070d82c95fd64cb1e40395645.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/logo-7fa7901bf3ed34a59958448fd22c7757893d38c6a38676af076a92777d1d9a5a.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/make_dif-69aa72b92b01a29b8faf88ca2b8857e59abd2e38cb37a3d24c5078e95d40c123.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/odds-aac53e0e639a719b8faa49803ab44431345aa3ce713abf7bf0394c9d0d936d14.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/share/qrcode-984d6ccb596cab2fe4d82376006e5a16d3f4ed7ba3de52ac381bcc77861e8267.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/share/qzone_icon-7a2151410a27449cf8d341eb58af2882d7cc3a9a4e6eb40d1b9b630ee58cac68.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/share/ren_icon-8d3dc687f735dce27b9a18c641f3254e1e15b44d7e2e6306e5ba969fc5d66978.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/service_1-62e502defad456f82e608c448acf1bfe4525206da8b1a7244a73ad37a8ef9c36.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/sina_black-6f89d911dcdca85edeef3499032dc896afba73195cdf2278ebab065e5945b5bb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/share/sina_icon-347f8d338cdb5d5835251075f0360f7341eeb7b26e60fb5da96e7e9d13233bbd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/share/t_qq_icon-f93ea88fb31c9af35ee86e7edd141721d073974b56291b161b131dc2ac90397b.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/wechat-24df3181bdcc9b8819463ed65650c6373b0322ad8cfee565c5a67398e4429bdc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/wechat_black-326b18beaa810953ead67bdedb4874146e577f48ae4865e71962940baf0a12f9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/workshop-c1d200e9f31ef7f01f206302c41d07ab4ff3f58793da381b090da3e17be7d58c.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/workshop_1-236c58b61e9f1d1b5d2e33032870635cf8dc2c58a0df3ea131d95261f7425252.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/share/wx_icon-1dcc9f4ffb41737777334b2f3efa409eca68f15ab1d1c76f83c6d321f93080bd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Mat/金-c45abb39d88c8eea45def2b3b0c14466b4b3944271618a966f18b8e4c62e4aee.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Mat/银-cdc43ec544a760dba4fe167ce0f4b7b64b20799e7348ad30019d2036ef19750a.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Mat/镀玫瑰金-cfda8c8e45cfccfd764be9247fa03162d03ea5c68d5b90cebfdadd31e94f275e.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Mat/镀金-c45abb39d88c8eea45def2b3b0c14466b4b3944271618a966f18b8e4c62e4aee.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Mat/黑银-96d0a5f21d1cd346cb1b7009949a40ca954bfafd6c5d78cc9b1649eb90aba0c7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/.sprockets-manifest-e0277465c3bb450dd05f92a881585381.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Cart_disp-1f65e4556fec4563eca247311ee341b8e5a2e03c1f263c11c37e3ce615e632cb.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Forgot-04c71fd64d796b58c3eac5c4afa493e0048f77545144aeac58f1d9d3a1ced313.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Log-edcc791e4ea23b05f1ccf9e80f45560e560aab5c7cd3083e0ce740e45b018b97.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/One-d81c53216a9749370caac01d1f89c30254b7e83f7ea9ee5a1512beb6cd9e0e7c.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Product_detail-97bed3d6362f2aed1308745bac57ac1977b2f5f36fdf674eb57b1ddf7b0ca316.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Product_detail_selected-ddfdc4e82b507b5ac3e890a8a17548adb159eaa97b4853241c77fd5ed803d499.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/Reg-77f34e167bb2dd99d07ac3bda1d9764e250f31f2a4309f30edb4c5aaa16399ca.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-787cb403c10e4942be867257303391f345916ab2de0098b668d51240a2fb13b3.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-9e47fdd9c917fe292670daa5954bde37cf8a091d87077b553d15972e5e178f56.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/admin/bootstrap.min-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/cart_show-7832140635883ad7c0a4f94e3005f2101075854a7fb5fdb5f2d9b512de0ae7e4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/check_out-bdc31d01dea8b2e8a6a0f4e848fe83997dbd942e4f55e36fdcb03ac95524ab10.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/designer_products-baf03fd4f0712504918992a881170a416493872374f920782a61ad3bae888e62.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/dist/themes/basic/assets/fonts/icons-8b1c217350582ecf4a9ad5a9410c5b0afcbcac89563ad885665d404cc9fd6af1.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/src/themes/basic/assets/fonts/icons-8b1c217350582ecf4a9ad5a9410c5b0afcbcac89563ad885665d404cc9fd6af1.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic-ui/icons-bfdef833219a6edffd9c3cbc28db72739d22bb4d20cc2e2f8d56a7a4d408a206.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/dist/themes/default/assets/fonts/icons-bfdef833219a6edffd9c3cbc28db72739d22bb4d20cc2e2f8d56a7a4d408a206.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/semantic/src/themes/default/assets/fonts/icons-bfdef833219a6edffd9c3cbc28db72739d22bb4d20cc2e2f8d56a7a4d408a206.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/jquery-2.1.4.min-92bfaaece1eee1e40fd3b55441ee536e7f6a03242aa5fe10e2597a27103c9dae.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/share_tool-d0b07d555aa228805fe87044bb0a4b074b30daf48f994aa2904de02200db0688.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/store_index-978dd2b80442c5d0dcf8b3155507552d3f57b4fbdef149a92caa07766c7a3284.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.ru" afterPath="$PROJECT_DIR$/config.ru" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/resources/global_header.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/resources/global_header.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/resources/index.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/resources/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/store/index.html.erb" afterPath="$PROJECT_DIR$/app/views/store/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/prieov0.1.iml" afterPath="$PROJECT_DIR$/.idea/prieov0.1.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product.rb" afterPath="$PROJECT_DIR$/app/models/product.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/products_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/products_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/property_test.rb" afterPath="$PROJECT_DIR$/test/models/property_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/resource.rb" afterPath="$PROJECT_DIR$/app/models/resource.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/resource_test.rb" afterPath="$PROJECT_DIR$/test/models/resource_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin/resources_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/admin/resources_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/resources_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/resources_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/bootstrap.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/admin/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/home/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/products/index.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/products/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/index.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/admin/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/modal.min.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/admin/modal.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/resources/product_picture.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/resources/product_picture.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="0028ec8d-cfe0-4055-9f8d-36c565dd91e7" name="Failed commit: Default" comment="fix user login&#10;" />
@@ -46,7 +137,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/prieov0.1@Rails_console__prieov0_1.coverage" NAME="Rails console: prieov0.1 Coverage Results" MODIFIED="1438495150317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="prieov0.1" />
     <SUITE FILE_PATH="coverage/prieov0.1@Development__prieov0_1.coverage" NAME="Development: prieov0.1 Coverage Results" MODIFIED="1438612899950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="prieov0.1" />
-    <SUITE FILE_PATH="coverage/prieov0.1@routes__prieov0_1.coverage" NAME="routes: prieov0.1 Coverage Results" MODIFIED="1439021911518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="prieov0.1" />
+    <SUITE FILE_PATH="coverage/prieov0.1@routes__prieov0_1.coverage" NAME="routes: prieov0.1 Coverage Results" MODIFIED="1439096497610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="prieov0.1" />
     <SUITE FILE_PATH="coverage/prieov0.1@db_migrate__prieov0_1.coverage" NAME="db:migrate: prieov0.1 Coverage Results" MODIFIED="1438775732672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="prieov0.1" />
     <SUITE FILE_PATH="coverage/prieov0.1@db_rollback__prieov0_1.coverage" NAME="db:rollback: prieov0.1 Coverage Results" MODIFIED="1438497943740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="prieov0.1" />
   </component>
@@ -69,60 +160,27 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/admin/resources_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="125" column="3" selection-start-line="125" selection-start-column="3" selection-end-line="125" selection-end-column="3" />
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/admin/products/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.06908463">
-              <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.20689656">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="markdown-preview-editor">
-            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="product_picture.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admin/resources/product_picture.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="global_footer.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/resources/global_footer.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-51.03448">
-              <caret line="74" column="28" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="global_body.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/resources/global_body.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-57.931034">
-              <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="product.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/resources/product.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-15.172414">
-              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+              <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -138,31 +196,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/resources/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.137932">
-              <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new_product.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/resources/new_product.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32142857">
-              <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="new_global.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admin/resources/new_global.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.31034482">
               <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/admin/layouts/application.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.965517">
+              <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -187,7 +235,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/designer/home/index.html.erb" />
@@ -207,7 +254,6 @@
         <option value="$PROJECT_DIR$/app/models/line_item.rb" />
         <option value="$PROJECT_DIR$/app/models/property.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/products_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/admin/products/index.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20150727121245_create_properties.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/resources/global.html.erb" />
         <option value="$PROJECT_DIR$/db/schema.rb" />
@@ -225,7 +271,6 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config.ru" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/views/admin/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/resources/new_global.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/resources/new_product.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/resources/index.html.erb" />
@@ -234,10 +279,13 @@
         <option value="$PROJECT_DIR$/app/views/admin/resources/global_body.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/resources/global_footer.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/resources/product.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/admin/resources/product_picture.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/resources_controller.rb" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/app/views/admin/home/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admin/resources/product_picture.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admin/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admin/products/index.html.erb" />
       </list>
     </option>
   </component>
@@ -305,220 +353,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieov0.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieov0.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieov0.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieov0.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="products" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieov0.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieov0.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieov0.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieov0.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieov0.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieov0.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieov0.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prieo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -530,7 +364,7 @@
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="false" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
@@ -888,20 +722,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32740742" sideWeight="0.4996016" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3260188" sideWeight="0.4996016" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.204236" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32299545" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31191224" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31191224" sideWeight="0.49092284" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5060514" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31191224" sideWeight="0.50907713" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35579938" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -960,27 +794,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.37438422">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/admin/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.098445594">
-          <caret line="3" column="63" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28078818">
@@ -995,13 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/admin/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5303777">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/products/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1013,13 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.035715">
           <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/admin/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1077,17 +876,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/products/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.464286">
-          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admin/products_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1175,14 +968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/products_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1263,30 +1048,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/resources/global_footer.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-51.03448">
-          <caret line="74" column="28" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/resources/product.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.172414">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/resources/product_picture.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7881773">
@@ -1311,23 +1072,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/resources_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="125" column="3" selection-start-line="125" selection-start-column="3" selection-end-line="125" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06908463">
-          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+          <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
           <folding />
         </state>
       </provider>
       <provider editor-type-id="markdown-preview-editor">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/home_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.098522164">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/resources/global_footer.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.5517242">
+          <caret line="74" column="28" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/resources/product.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44827586">
+          <caret line="13" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/resources/product_picture.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.172414">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/resources_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.965517">
+          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/admin/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/admin/modal.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0180624">
+          <caret line="83" column="39" selection-start-line="83" selection-start-column="39" selection-end-line="83" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/products/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20689656">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
