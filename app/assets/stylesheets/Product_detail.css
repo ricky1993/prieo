@@ -199,7 +199,8 @@
 {
     margin-bottom:10px;
 }
-/*材质描述层*/
+
+
 #Product_detail_content_material .col-md-10, #Product_detail_content_size .col-md-10
 {
     font-size:0;
@@ -246,7 +247,7 @@
     padding:0;
     border:2px solid #31b0d5;
 }
-/*添加对于尺寸的文字样式*/
+
 
 .siz_row_2
 {
@@ -306,7 +307,7 @@ a:hover
 }
 
 
-/*商品数量*/
+
 #Product_detail_content_quantity .row_title
 {
     margin-top:6px;
@@ -370,7 +371,6 @@ a:hover
     /*position:absolute;*/
 /*}*/
 
-/*轮播导航和设计师说明*/
 #Product_detail_before_pic
 {
     font: 14px/1.5 arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;

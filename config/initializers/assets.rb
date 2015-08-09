@@ -10,7 +10,7 @@ Rails.application.config.assets.version = '1.0'
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( jquery-2.1.4.min.js )
-Rails.application.config.assets.precompile += %w( bootstrap.min.js )
+#Rails.application.config.assets.precompile += %w( bootstrap.min.js )
 Rails.application.config.assets.precompile += %w( cart_show.js )
 Rails.application.config.assets.precompile += %w( Product_detail_selected.js )
 Rails.application.config.assets.precompile += %w( share_tool.js )
@@ -28,9 +28,3 @@ Rails.application.config.assets.precompile += %w( designer_products.css )
 Rails.application.config.assets.precompile += %w( check_out.css )
 #admin assets
 
-
-
-
-Rails.application.config.assets.precompile += %w(admin/sidebar.min.css)
-Rails.application.config.assets.precompile += %w(admin/modal.min.css)
-Rails.application.config.assets.precompile += %w(admin/bootstrap.min.css)

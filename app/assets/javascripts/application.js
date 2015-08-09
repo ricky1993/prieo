@@ -12,8 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require semantic
-//= require semantic-ui
-//= require semantic-ui/sidebar
-//= require semantic-ui/modal
-//= require semantic-ui/dropdown
+//= require turbolinks
+//= require_tree .
