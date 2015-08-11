@@ -1,4 +1,5 @@
 class Admin::HomeController < ApplicationController
+
   def index
     render :layout => 'admin/layouts/application'
   end
