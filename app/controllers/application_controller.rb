@@ -1,5 +1,17 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_filter do
+    resource = controller_name.singularize.to_sym
+    method = "#{resource}_params"
+    params[resource] &&= send(method) if respond_to?(method, true)
+  end
+  before_filter :authenticate_user!
+
+  private
+  # Catching exceptions from Cancan
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to :home, alert: exception.message
+  end
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -7,6 +19,7 @@ class ApplicationController < ActionController::Base
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to root_url, :alert => exception.message
   end
+
 
   def after_sign_in_path_for(resource)
     if resource.is_a?(User)
