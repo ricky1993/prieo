@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
     method = "#{resource}_params"
     params[resource] &&= send(method) if respond_to?(method, true)
   end
-  before_filter :authenticate_user!
 
   private
   # Catching exceptions from Cancan
