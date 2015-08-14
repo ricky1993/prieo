@@ -1,6 +1,6 @@
 class Admin::ResourcesController < ApplicationController
   before_action :set_resource, only: [:show, :edit, :update, :destroy]
-  load_and_authorize_resource
+
 
   def global_header
     @count = 0
@@ -38,7 +38,8 @@ class Admin::ResourcesController < ApplicationController
 
   def product_picture
     @count = 0
-    @resource = Resource.where(:kind => Resource::PRODUCT).where(:product_id => params[:product_id]).order(:created_at=> :desc)
+    @resources = Resource.where(:kind => Resource::PRODUCT).where(:product_id => params[:id].to_i).order(:created_at=> :desc)
+    render :layout => 'admin/layouts/application'
   end
 
   def configure

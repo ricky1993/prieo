@@ -48,45 +48,27 @@
           padding: 5em 0em;
       }
   </style>
-
 </head>
-
 <body>
-
-
-
-
 <div class="ui fixed inverted menu">
   <div class="ui container">
     <div href="#" class="header item">
       <%= image_tag 'logo.png',:class=>'logo' %>
     </div>
-    <a href="#" class="item">主页</a>
+    <%= link_to '主页',admin_home_index_path,class:'item' %>
     <a id="siderbarshow" class="item">边栏</a>
-    <a href="#" class="ui simple dropdown item">
-      Dropdown <i class="dropdown icon"></i>
-      <div class="menu">
-        <div class="item">Link Item</div>
-        <div class="item">Link Item</div>
-        <div class="divider"></div>
-        <div class="header">Header Item</div>
-        <div class="item">
-          <i class="dropdown icon"></i>
-          Sub Menu
-          <div class="menu">
-            <div class="item">Link Item</div>
-            <div class="item">Link Item</div>
-          </div>
-        </div>
-        <div class="item">Link Item</div>
-      </div>
-    </a>
     <div class="right menu">
       <div class="item">
         <div class="ui transparent inverted icon input">
           <i class="search icon"></i>
           <input type="text" placeholder="Search">
         </div>
+      </div>
+      <div class="item">
+        <a>
+          <i class="user icon"></i>
+          我的空间
+        </a>
       </div>
       <div class="item">
         <a>
@@ -124,7 +106,7 @@
     <i class="chat icon"></i>
     订单
   </a>
-  <a class="item">
+  <a href="/store/index" class="item">
     <i class="shop icon"></i>
     商店
   </a>
