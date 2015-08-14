@@ -19,3 +19,4 @@
 //= require semantic-ui/sidebar
 //= require semantic-ui/modal
 //= require semantic-ui/dropdown
+//= require bootstrap-sprockets

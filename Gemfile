@@ -2,9 +2,9 @@ source 'https://rubygems.org'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-semantic'
-  #gem 'rails-assets-bootstrap'
 end
 
+gem 'bootstrap-sass', '~> 3.3.5'
 gem 'therubyracer'
 
 gem 'carrierwave'

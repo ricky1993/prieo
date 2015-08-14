@@ -7,7 +7,7 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.paths << Emoji.images_path
 
 # Precompile additional assets.
-# application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
+# application.js, application.scss, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( jquery-2.1.4.min.js )
 Rails.application.config.assets.precompile += %w( bootstrap.min.js )
@@ -16,9 +16,6 @@ Rails.application.config.assets.precompile += %w( Product_detail_selected.js )
 Rails.application.config.assets.precompile += %w( admin/dropdown.min.js )
 Rails.application.config.assets.precompile += %w( admin/sidebar.min.js )
 Rails.application.config.assets.precompile += %w( share_tool.js )
-Rails.application.config.assets.precompile += %w( admin/modal.min.js )
-Rails.application.config.assets.precompile += %w( admin/index.js )
-Rails.application.config.assets.precompile += %w( admin/bootstrap.min.js )
 
 
 
@@ -34,8 +31,3 @@ Rails.application.config.assets.precompile += %w( check_out.css )
 #admin assets
 
 
-
-
-Rails.application.config.assets.precompile += %w(admin/sidebar.min.css)
-Rails.application.config.assets.precompile += %w(admin/modal.min.css)
-Rails.application.config.assets.precompile += %w(admin/bootstrap.min.css)
