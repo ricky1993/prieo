@@ -34,8 +34,12 @@
 
           <div class="field">
             <%= f.label :上传图片文件 %>
-            <%= f.file_field :image,:id=>'carpoolpic2',:onchange=>'changesrc(this)'%>
-            <%= f.hidden_field :image_cache %>
+            <%= f.file_field :image_url,:id=>'carpoolpic2',:onchange=>'changesrc(this)'%>
+            <%= f.hidden_field :image_url_cache %>
+            <h3>预览：</h3>
+            <img src="" alt="" id="prev" height="200" width="340" />
+            当前选择文件大小：
+            <div id="fileSize"></div>
           </div>
 
           <div class="field">
@@ -81,7 +85,7 @@
                             rules: [
                                 {
                                     type: 'empty',
-                                    prompt: '请选择一种资源类型'
+                                    prompt: '请选择一名设计师'
                                 }
                             ]
                         },

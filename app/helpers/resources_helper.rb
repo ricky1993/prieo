@@ -37,7 +37,7 @@ module ResourcesHelper
 
   def product_entire(product_id)
     product = Product.find(product_id)
-    resources = Resource.where(:kind=>Resource::PRODUCT_ENTIRE).where(:check=>true).where(:product_id=>product_id).order(:created_at=>:desc)
+    resources = Resource.where(:kind=>Resource::PRODUCT_ENTIRE).where(:product_id=>product_id).order(:created_at=>:desc)
     if resources.count>=1
       image_tag resources.first.path_url.to_s
     else
@@ -46,7 +46,7 @@ module ResourcesHelper
   end
 
   def product_partial1(product_id)
-    resources = Resource.where(:kind=>Resource::PRODUCT_PARTIAL).where(:check=>true).where(:product_id=>product_id).order(:created_at=>:desc)
+    resources = Resource.where(:kind=>Resource::PRODUCT_PARTIAL).where(:product_id=>product_id).order(:created_at=>:desc)
     if resources.count>=1
       image_tag resources.first.path_url.to_s
     else

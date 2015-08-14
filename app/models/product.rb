@@ -4,11 +4,11 @@ class Product < ActiveRecord::Base
   has_many :resources
   has_many :carts, :through => :line_items
 
-  mount_uploader :image,ImageUploader
+  mount_uploader :image_url,ImageUploader
 
  # before_destroy :ensure_not_referenced_by_any_line_item
 
-  validates :title, :description, :image_url, :presence => true
+  validates :title, :description,  :presence => true
   validates :price, :numericality => {:greater_than_or_equal_to => 0.01}
   validates :title, :uniqueness => true
   #validates :image_url, :format => {
