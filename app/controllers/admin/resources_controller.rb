@@ -38,7 +38,8 @@ class Admin::ResourcesController < ApplicationController
 
   def product_picture
     @count = 0
-    @resource = Resource.where(:kind => Resource::PRODUCT).where(:product_id => params[:product_id]).order(:created_at=> :desc)
+    @resources = Resource.where(:kind => Resource::PRODUCT).where(:product_id => params[:id].to_i).order(:created_at=> :desc)
+    render :layout => 'admin/layouts/application'
   end
 
   def configure

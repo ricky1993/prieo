@@ -14,6 +14,7 @@
             </div>
             <div class="content">
               <div class="header"><%= resource.name %></div>
+              <p>种类：<%= resource.kind %></p>
               <% if resource.product_id !=nil %>
                   <p>关联商品ID: <%= resource.product_id %></p>
                   <% if Product.find(resource.product_id)==nil %>
@@ -22,7 +23,6 @@
                       <p>管理商品名称: <%= Product.find(resource.product_id).title %></p>
                   <% end %>
               <% end %>
-
             </div>
           </div>
         </div>
@@ -42,6 +42,17 @@
             <div class="ui attached segment">
               <div class="ui header"><%= resource.name %></div>
               <p><%= resource.description %></p>
+              <div class="ui attached segment">
+                <%= form_tag(admin_resources_check_path,:class=>'ui form',:method =>:get) do %>
+                    <div class="field">
+                      <%= check_box_tag :check  %> 选中即为默认显示
+                    </div>
+                    <div class="actions">
+                      <%= submit_tag '确定',class:'ui small button' %>
+                      <%= hidden_field_tag :id,resource.id %>
+                    </div>
+                <% end %>
+              </div>
             </div>
           </div>
 

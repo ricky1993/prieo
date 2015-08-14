@@ -35,11 +35,54 @@ module ResourcesHelper
     end
   end
 
+  def product_entire(product_id)
+    product = Product.find(product_id)
+    resources = Resource.where(:kind=>Resource::PRODUCT_ENTIRE).where(:check=>true).where(:product_id=>product_id).order(:created_at=>:desc)
+    if resources.count>=1
+      image_tag resources.first.path_url.to_s
+    else
+      image_tag product.image_url.to_s
+    end
+  end
+
+  def product_partial1(product_id)
+    resources = Resource.where(:kind=>Resource::PRODUCT_PARTIAL).where(:check=>true).where(:product_id=>product_id).order(:created_at=>:desc)
+    if resources.count>=1
+      image_tag resources.first.path_url.to_s
+    else
+      image_tag 'logo.png'
+    end
+  end
+
+  def product_partial2(product_id)
+    resources = Resource.where(:kind=>Resource::PRODUCT_PARTIAL).where(:check=>true).where(:product_id=>product_id).order(:created_at=>:desc)
+    if resources.count>=2
+      image_tag resource.second.path_url.to_s
+    else
+      image_tag 'logo.png'
+    end
+  end
+
+  def product_partial3(product_id)
+    resources = Resource.where(:kind=>Resource::PRODUCT_PARTIAL).where(:check=>true).where(:product_id=>product_id).order(:created_at=>:desc)
+    if resources.count>=3
+      image_tag resource.second.path_url.to_s
+    else
+      image_tag 'logo.png'
+    end
+  end
+
+  def product_partial4(product_id)
+    resources = Resource.where(:kind=>Resource::PRODUCT_PARTIAL).where(:check=>true).where(:product_id=>product_id).order(:created_at=>:desc)
+    if resources.count>=4
+      image_tag resource.second.path_url.to_s
+    else
+      image_tag 'logo.png'
+    end
+  end
 
 
-  
   def global_body
-
   end
 
   def global_footer

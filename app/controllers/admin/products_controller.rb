@@ -30,21 +30,31 @@ class Admin::ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-    if @product.save
-      redirect_to controller:'admin/products',action:'show',id:@product.id,:status => :found
+    respond_to do |format|
+      if @product.save
+        format.html { redirect_to admin_products_path, notice: '商品成功创建.' }
+        format.json { render :show, status: :created, location: @product }
+      else
+        format.html { render :new }
+        format.json { render json: @product.errors, status: :unprocessable_entity }
+      end
     end
-
   end
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
-    if @product.update(product_params)
-      redirect_to controller:'admin/products',action:'show',id:@product.id
+    respond_to do |format|
+      if @product.update(product_params)
+        format.html { redirect_to controller:'admin/products',action:'show',id:@product.id, notice: 'Product was successfully updated.' }
+        format.json { render 'admin/products/show', status: :ok, location: @product }
+      else
+        format.html { render 'admin/products/edit' }
+        format.json { render json: @product.errors, status: :unprocessable_entity }
+      end
     end
   end
 
   def delete
-
   end
 
   # DELETE /products/1
