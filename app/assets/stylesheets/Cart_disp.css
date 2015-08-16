@@ -7,14 +7,18 @@
     padding-right:0;
 }
 
-
+#title_tt >h2
+{
+    font-size:30px;
+}
 #cart_table
 {
     border-top:1px solid #c5c5c5;
     margin-bottom:0;
 }
 
-.table>thead
+
+#cart_table>thead
 {
     background: #f8f8f8;
 }
@@ -22,7 +26,9 @@
 {
     padding-left:0;
     padding-right:0;
+    vertical-align: middle;
 }
+
 .table>tbody>tr>td
 {
     padding-left:0;
@@ -34,7 +40,12 @@
 {
     font-size:15px;
 }
-
+.cart_table_second
+{
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size:15px;
+}
 #Cart_product_image
 {
     text-align:right;
@@ -54,7 +65,7 @@
 }
 #number_slider
 {
-    margin-top:-12px;
+    margin-top:-8px;
     width:50%;
     margin-left:40px;
 }
