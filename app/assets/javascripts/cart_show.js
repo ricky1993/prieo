@@ -41,38 +41,75 @@ function calcTotalPallets() {
     $("#total_product_num").html(parseInt(totalPallets));
 }
 
-$(function(){
-    $('.cart_product_number').blur(function()
-        {
-            var $this = $(this);
-            var numPallets = $this.val();
-            var multiplier = $this
-                .parent().parent()
-                .find("h5.cart_product_per_price span")
-                .text();
 
-            //if ( (IsNumeric(numPallets)) && (numPallets != '') ) {
-            if ((IsNumeric(numPallets)) && (numPallets != ''))
-            {
-                var rowTotal = numPallets * multiplier;
-                $this
-                    .css("background-color", "white")
-                    .parent().parent()
-                    .find("h5.cart_product_row_total_price span")
-                    .html(rowTotal.toFixed(2));
-            }
-            else
-            {
-                $this
-                    .parent().parent()
-                    .find("#number_slider_out input")
-                    .val(1);
-                $this
-                    .parent().parent()
-                    .find("h5.cart_product_row_total_price span")
-                    .html(multiplier.toFixed(2));
-            }
-            calcTotalPallets();
-            calcProdSubTotal();
-        })
-});
+function function_main()
+{
+    var $this=$("#number_slider");
+    var numPallets = $this.val();
+    var multiplier = $this
+        .parent().parent()
+        .find("span.cart_product_per_price span")
+        .text();
+
+    //if ( (IsNumeric(numPallets)) && (numPallets != '') ) {
+    if ((IsNumeric(numPallets)) && (numPallets != ''))
+    {
+        var rowTotal = numPallets * multiplier;
+        $this
+            .css("background-color", "white")
+            .parent().parent()
+            .find("span.cart_product_row_total_price span")
+            .html(rowTotal.toFixed(2));
+    }
+    else
+    {
+        $this
+            .parent().parent()
+            .find("#number_slider_out input")
+            .val(1);
+        multiplier=multiplier*1;
+        $this
+            .parent().parent()
+            .find("span.cart_product_row_total_price span")
+            .html(multiplier.toFixed(2));
+    }
+    calcTotalPallets();
+    calcProdSubTotal();
+
+}
+//$(function(){
+//    $('.cart_product_number').change(function()
+//        {
+//            var $this = $(this);
+//            var numPallets = $this.val();
+//            var multiplier = $this
+//                .parent().parent()
+//                .find("span.cart_product_per_price span")
+//                .text();
+//
+//            //if ( (IsNumeric(numPallets)) && (numPallets != '') ) {
+//            if ((IsNumeric(numPallets)) && (numPallets != ''))
+//            {
+//                var rowTotal = numPallets * multiplier;
+//                $this
+//                    .css("background-color", "white")
+//                    .parent().parent()
+//                    .find("span.cart_product_row_total_price span")
+//                    .html(rowTotal.toFixed(2));
+//            }
+//            else
+//            {
+//                $this
+//                    .parent().parent()
+//                    .find("#number_slider_out input")
+//                    .val(1);
+//                multiplier=multiplier*1;
+//                $this
+//                    .parent().parent()
+//                    .find("span.cart_product_row_total_price span")
+//                    .html(multiplier.toFixed(2));
+//            }
+//            calcTotalPallets();
+//            calcProdSubTotal();
+//        })
+//});
