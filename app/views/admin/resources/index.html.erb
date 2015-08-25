@@ -1,5 +1,3 @@
-<br />
-<br />
 <hr />
 <style>
   #ButtonContent{
@@ -14,12 +12,9 @@
 <h3 class="ui top attached header">全局资源管理</h3>
 <div id="ButtonContent" class="ui attached segment">
   <div class="ui three column grid">
-    <div class="column"></div>
-    <div class="row">
       <div class="column"><%= link_to '页头轮播插件管理',admin_resources_global_header_path,class:'ui large button' %></div>
       <div class="column"><%= link_to '页面图片资源管理',admin_resources_global_body_path,class:'ui large button' %></div>
       <div class="column"><%= link_to '页脚轮播插件管理',admin_resources_global_footer_path,class:'ui large button' %></div>
-    </div>
   </div>
 </div>
 
@@ -28,12 +23,9 @@
 <h3 class="ui top attached header">商品资源管理</h3>
 <div id="ButtonContent" class="ui attached segment">
   <div class="ui three column grid">
-    <div class="column"></div>
-    <div class="row">
       <div class="column"><%= link_to '商品图片',admin_resources_product_path,class:'ui large button' %></div>
-      <div class="column"><button class="ui large button">添加商品材质</button></div>
-      <div class="column"><button class="ui large button">添加商品尺寸</button></div>
-    </div>
+      <div class="column"><%= link_to '商品材质',admin_properties_path,class:'ui large button'%></div>
+      <div class="column"><%= link_to '商品尺寸',admin_properties_path,class:'ui large button'%></div>
   </div>
 </div>
 
@@ -41,5 +33,9 @@
   <br />
 </div>
 
-<%= link_to '新增资源',new_admin_resource_path,class:'ui large button' %>
+
+<%= link_to '新增全局资源', admin_resources_new_global_path,class:'ui large button' %>
+<%= link_to '新增商品图片',admin_resources_new_product_path,class:'ui large button' %>
+<%= link_to '新增商品尺寸或材质',new_admin_property_path,class:'ui large button' %>
+<hr />
 

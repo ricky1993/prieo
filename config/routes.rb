@@ -1,5 +1,21 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+  get 'properties/index'
+  end
+
+  namespace :admin do
+  get 'properties/new'
+  end
+
+  namespace :admin do
+  get 'properties/edit'
+  end
+
+  namespace :admin do
+  get 'properties/show'
+  end
+
   namespace :designer do
     get 'home/index'
     resource :product
@@ -9,8 +25,8 @@ Rails.application.routes.draw do
 
 
 
-
   namespace :admin do
+    get 'home/user'
     get 'home/index'
     get 'home/login'
     get 'home/about'
@@ -20,8 +36,13 @@ Rails.application.routes.draw do
 
     get 'products/delete'
 
+    get 'properties/product_property'
+
+    resources :properties
+
     resources :orders
     resources :products
+
 
 
 

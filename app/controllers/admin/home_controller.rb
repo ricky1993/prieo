@@ -13,9 +13,13 @@ class Admin::HomeController < ApplicationController
     render :layout => 'admin/layouts/application'
   end
 
+  def user
+    @user = current_user
+    render :layout => 'admin/layouts/application'
+  end
+
   def contact_us
     render :layout => 'admin/layouts/application'
-
   end
 
   def login
