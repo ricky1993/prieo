@@ -50,39 +50,36 @@
         <div class="row_title col-md-2 mat_row_2">
           材质
         </div>
-        <div class="col-md-10">
-          <% for i in 1..7 do  %>
-              <a href="javascript:" class="mat" >
-                <%= image_tag("Mat/Roseking.jpg")  %>
-              </a>
-          <% end %>
-        </div>
-        <div class="col-md-10">
-          <% for i in 1..7 do  %>
-              <a href="javascript:" class="mat" >
-                <%= image_tag("Mat/Roseking.jpg")  %>
-              </a>
-          <% end %>
-        </div>
+        <% @count = 0 %>
+        <% material_helper(@product).each do |material| %>
+            <% if @count%7==0 %>
+                <div class="col-md-10">
+            <% end %>
+            <a href="javascript:" class="siz" >
+              <%= material.value %>
+            </a>
+            <% if @count%7==0 %>
+                </div>
+            <% end %>
+        <% end %>
       </div>
       <div id="Product_detail_content_size" class="row">
         <div class="row_title col-md-2 siz_row_2">
           尺寸
         </div>
-        <div class="col-md-10">
-          <% for i in 1..7 do %>
-              <a href="javascript:" class="siz" >
-                xx.x寸
-              </a>
-          <% end %>
-        </div>
-        <div class="col-md-10">
-          <% for i in 1..7 do %>
-              <a href="javascript:" class="siz" >
-                xx.x寸
-              </a>
-          <% end %>
-        </div>
+        <% @count1 = 0 %>
+        <% size_helper(@product).each do |size| %>
+            <% if @count%7==0 %>
+              <div class="col-md-10">
+            <% end %>
+                  <a href="javascript:" class="siz" >
+                    <%= size.value %>寸
+                  </a>
+            <% if @count%7==0 %>
+              </div>
+            <% end %>
+        <% end %>
+
       </div>
       <div id="Product_detail_content_make" class="row">
         <div class="row_title col-md-2 ">

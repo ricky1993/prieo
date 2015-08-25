@@ -57,6 +57,11 @@ class Admin::ResourcesController < ApplicationController
     render :layout => 'admin/layouts/application'
   end
 
+  def new
+    @resource = Resource.new
+    render layout: 'admin/layouts/application'
+  end
+
   # GET /resources/new
   def new_global
     @resource = Resource.new
