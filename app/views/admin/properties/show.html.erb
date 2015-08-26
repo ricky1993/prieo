@@ -1,0 +1,20 @@
+<div class="ui raised very padded text container segment">
+  <h2 class="ui header">商品性质详细信息显示</h2>
+  <p>
+    <strong>性质名称:</strong>
+    <%= @property.name %>
+  </p>
+
+  <p>
+    <strong>性质种类:</strong>
+    <%= @property.propertytype %>
+  </p>
+
+  <p>
+    <strong>性质值</strong>
+    <%= @property.value %>
+  </p>
+  <%= link_to '编辑',{controller: 'admin/properties',action: 'edit',id:@property.id},class:'ui compact button' %>
+  <%= link_to '返回', admin_properties_path,class:'ui compact button' %>
+</div>s
+
