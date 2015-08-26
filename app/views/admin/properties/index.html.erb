@@ -1,0 +1,39 @@
+<hr />
+
+<h1 class="ui top attached header">商品性质</h1>
+<div class="ui attached segment">
+  <table class="ui selectable inverted table">
+    <thead>
+    <tr>
+      <th>编号</th>
+      <th>性质名称</th>
+      <th>种类</th>
+      <th>值</th>
+      <th>状态</th>
+      <th>所属商品id</th>
+      <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @count = 0 %>
+    <% @properties.each do |property| %>
+        <tr>
+          <div id=<%= @count %>>
+            <% @count+=1 %>
+            <td><%= @count %></td>
+            <td><%= property.name %></td>
+            <td><%= property.propertytype %></td>
+            <td><%= property.value %></td>
+            <td><% if property.state %><%= '启用' %><% else %><%= '禁止' %><% end %></td>
+            <td><%= link_to property.product_id,admin_product_path(Product.find(property.product_id)) %></td>
+            <td>
+              <%= link_to '显示',admin_property_path(property) %> ||
+              <%= link_to '编辑',{controller:'admin/properties',action:'edit',id:property.id } %></td>
+          </div>
+        </tr>
+    <% end %>
+
+    </tbody>
+  </table>
+</div>
+<br />

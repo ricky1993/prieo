@@ -1,0 +1,104 @@
+<hr />
+
+<h2 class="ui top attached header">编辑</h2>
+<div class="ui attached segment">
+
+  <div class="ui attached segment">
+    <p><div class="ui form">
+    <%= form_for @property,url: {action:'update',controller:'admin/properties',:id=>@property.id,class:'ui form segment'} do |f| %>
+        <% if @property.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@property.errors.count, 'error') %>禁止保存:</h2>
+
+              <ul>
+                <% @property.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+
+
+        <div class="field">
+          <%= f.label :商品性质名称 %><br>
+          <%= f.text_field :name %>
+        </div>
+
+        <div class="field">
+          <%= f.label :性质类型 %><br>
+          <%= f.select :propertytype,['商品尺寸','商品材质'] %>
+        </div>
+
+        <div class="field">
+          <%= f.label :值 %>
+          <%= f.text_field :value   %>
+        </div>
+
+        <div class="field">
+          <%= f.label :所属商品ID %>
+          <%= f.text_field :product_id%>
+        </div>
+
+        <div class="field">
+          <%= f.label :状态 %>
+          <%= f.check_box :state %>
+        </div>
+
+        <div class="actions">
+          <button class="red ui button" type="submit">确认添加</button>
+          <div class="ui error message"></div>
+        </div>
+    <% end %>
+  </div>
+  </div>
+</div>
+<br />
+
+<script>
+    $(document).ready(function() {
+        $('.ui.form')
+                .form({
+                    fields: {
+                        name: {
+                            identifier: 'property[name]',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: '请输入商品性质名称'
+                                }
+                            ]
+                        },
+                        propertytype: {
+                            identifier: 'property[propertytype]',
+                            rules: [
+                                {
+                                    type: 'empty',
+                                    prompt: '请输入性质类型'
+                                }
+                            ]
+                        },
+                        value:{
+                            identifier:'property[value]',
+                            rules:[
+                                {
+                                    type:'empty',
+                                    prompt:'请输入性质的值'
+                                }
+                            ]
+                        },
+                        product_id:{
+                            identifier :'property[product_id]',
+                            rules:[
+                                {
+                                    type   : 'integer[1..<% if Product.all.count>0 %><%= Product.last.id %><% end %>]',
+                                    prompt : '输入的商品的id不正确'
+                                }
+                            ]
+                        }
+                    }
+                })
+    });
+</script>
+
+
+<br /><br />
